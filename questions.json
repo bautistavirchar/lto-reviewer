@@ -1,0 +1,2172 @@
+[
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang ibig sabihin ng parisukat o parihabang traffic sign na may asul o puting ilaw?",
+    "img": "",
+    "answer": "Nagbibigay impormasyon",
+    "choices/c1": "Nagbibigay direksyon",
+    "choices/c2": "Nagbibigay babala",
+    "choices/c3": "Nagbibigay impormasyon"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Bilang isang drayber, ikaw ay higit na makapagdudulot ng pinsala sa kapaligiran sa pamamagitan ng _______.",
+    "img": "",
+    "answer": "pagpapatakbo ng matulin",
+    "choices/c1": "pagpapatakbo ng matulin",
+    "choices/c2": "pumili ng sasakyan na matipid sa gasolina",
+    "choices/c3": "regular na pagpapatingin at pagmamantene ng iyong sasakyan"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang drayber ay hindi dapat  mag-park o huminto sa gilid ng kalsada kapag may (stop sign) o traffic control signal dahil binabawasan nito ang kakayahang makita ng maayos ng ibang mga drayber, lalo na kapag:",
+    "img": "",
+    "answer": "6 m",
+    "choices/c1": "3 m",
+    "choices/c2": "5 m",
+    "choices/c3": "6 m"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang dapat munang gawain bago bamago ng mga daanan?",
+    "img": "",
+    "answer": "Gumawa ng signal",
+    "choices/c1": "Gumawa ng signal",
+    "choices/c2": "Suriin ang trapiko sa unahan",
+    "choices/c3": "Suriin sa salamin kung may trapiko sa likod"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kapag lumiko mula sa isang interseksyon papunta sa one-way na kalye, alin ang linya na dapat mong piliin?",
+    "img": "",
+    "answer": "Kapag lumiko sa kanan, manatili sa kanang linya",
+    "choices/c1": "Kapag lumiko sa kanan, manatili sa kanang linya",
+    "choices/c2": "Kapag lumiko pakanan, manatili sa pinakaloob na daanan",
+    "choices/c3": "Kapag lumiko pakanan, manatili sa gitna ng kalsada"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Magkano ang parusa para sa pangalawang opensa ng RA 10666 Children`s Safety on Motorcycle Act of 2015?",
+    "img": "",
+    "answer": "PHP 5,000.00",
+    "choices/c1": "PHP 1,000.00",
+    "choices/c2": "PHP 5,000.00",
+    "choices/c3": "PHP 7,000.00"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ilang helmet ang kayang iokupa ng top box ng motorsiklo?",
+    "img": "",
+    "answer": "Dalawang full face na helmet",
+    "choices/c1": "Dalawang full face na helmet",
+    "choices/c2": "Tatlong half face na helmet",
+    "choices/c3": "Apat na full face na helmet"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang ibig sabihin ng kumikislap na pulang ilaw ay:",
+    "img": "",
+    "answer": "Huminto",
+    "choices/c1": "Huminto",
+    "choices/c2": "Pagpatuloy",
+    "choices/c3": "Bagalan ang takbo"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Maaari ka bang manatili sa loob ng interseksiyon?",
+    "img": "",
+    "answer": "Hindi maaari, ang interseksiyon ay nararapat na maluwag sa lahat ng oras",
+    "choices/c1": "Kung ang ilaw pantrapiko ay kulay pula",
+    "choices/c2": "Kung ikaw ay nakatigil",
+    "choices/c3": "Hindi maaari, ang interseksiyon ay nararapat na maluwag sa lahat ng oras"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang bilis ng takbo ng sasakyan ay maaaring nakadepende sa:",
+    "img": "",
+    "answer": "lahat ng nabanggit",
+    "choices/c1": "pagiging road worthy ng mga sasakyang minamaneho",
+    "choices/c2": "kakayahan ng drayber",
+    "choices/c3": "lahat ng nabanggit"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kapag may sakit ang iyong kakayanan sa pagmamaneho ay maaaring maging  hindi maaayos. Dapat kang",
+    "img": "",
+    "answer": "Huwag magmaneho matapos uminom ng kahit anong gamot",
+    "choices/c1": "Uminom lamang ng kakaunting gamot",
+    "choices/c2": "Makipagkita sa iyong doktor kada bago magmamaneho",
+    "choices/c3": "Huwag magmaneho matapos uminom ng kahit anong gamot"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kapag nagmamaneho at kailangan mong tumawag o sumagot ng tawag sa iyong telepono o cellular phone at wala kang kagamitang pang-hands free o hindi hinahawakan ang phone, dapat:",
+    "img": "",
+    "answer": "tumabi sa gilid ng kalsada na ligtas at sagutin ang tawag",
+    "choices/c1": "agad na tumawag",
+    "choices/c2": "tumabi sa gilid ng kalsada na ligtas at sagutin ang tawag",
+    "choices/c3": "sagutin ang tawag habang nagmamaneho"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kapag naunahan ka ng kotse, ano ang dapat mong gawin?",
+    "img": "",
+    "answer": "Manatili sa kasalukuyang bilis",
+    "choices/c1": "Dagdagan ang bilis upang hindi maabutan",
+    "choices/c2": "Manatili sa kasalukuyang bilis",
+    "choices/c3": "Pindutin ang preno at hayaan ang mauna ang sasakyan"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Paano mo itinatapon ang langis ng makina ng motorsiklo na gam�t na?",
+    "img": "",
+    "answer": "Itapon ito nang maayos sa pamamagitan ng pagdala sa mga oil change facilities",
+    "choices/c1": "Itapon ito nang maayos sa pamamagitan ng pagbuhos nito sa sahig",
+    "choices/c2": "Itapon ito nang maayos sa pamamagitan ng pagdala sa mga oil change facilities",
+    "choices/c3": "Itapon ito nang maayos sa pamamagitan ng paglagay nito sa iyong basurahan"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang panuntunan sa Right-Of-Way ay nagbibigay ng:",
+    "img": "",
+    "answer": "Lahat ng nabanggit",
+    "choices/c1": "Pangunahing karapatan bilang mga driver",
+    "choices/c2": "Mga batas kapag nagbigay daan sa iba",
+    "choices/c3": "Lahat ng nabanggit"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang traffic sign na ito ay nagsasabing `magbigay ng karapatan sa daan`:",
+    "img": "",
+    "answer": "Baligtad na tatsulok",
+    "choices/c1": "Baligtad na tatsulok",
+    "choices/c2": "Patayong tatsulok",
+    "choices/c3": "Hugis na parihaba na may pulang border"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang maksimum na sukat ng pinasadyang top box ng motorsiklo?",
+    "img": "",
+    "answer": "2ft x 2ft x 2ft",
+    "choices/c1": "3ft x 3ft x 3ft",
+    "choices/c2": "2ft x 2ft x 2ft",
+    "choices/c3": "1.5ft x 1.5ft x 1.5ft"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kung maluwag ang daan, mabuti ba na bagalan ang takbo kapag tumatawid at ang traffic light ay berde o green?",
+    "img": "",
+    "answer": "Hindi",
+    "choices/c1": "Oo",
+    "choices/c2": "Hindi",
+    "choices/c3": "Kailangang magpreno ng hindi bababa sa tatlong beses"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Higit na mapanganib lumiko sa kaliwa kaysa sa kanan dahil ______.",
+    "img": "",
+    "answer": "ang sasakyang galing sa kabilang direksiyon ay higit na mabilis",
+    "choices/c1": "higit na maraming daanan o lane ang kalsada",
+    "choices/c2": "ang sasakyang galing sa kabilang direksiyon ay higit na mabilis",
+    "choices/c3": "higit na maraming nagtitinda sa kanang bahagi ng kalsada"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ito ay maaring makapagpadulas at makapagpawala sa iyong kontrol kung biglang gagawin lalo na sa mga basa at madudulas na kalsada.",
+    "img": "",
+    "answer": "Hindi tamang pagpreno",
+    "choices/c1": "Hindi tamang pagpreno",
+    "choices/c2": "Masyadong mabagal na pagliko",
+    "choices/c3": "Masyadong mabagal na pag-andar"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang kumikislap na dilaw na ilaw ay signal na nagpapahiwatig na dapat kang�",
+    "img": "",
+    "answer": "Bagalan ang takbo at magpatuloy kapag ligtas",
+    "choices/c1": "Bagalan ang takbo at magpatuloy kapag ligtas",
+    "choices/c2": "Ipagpatuloy ang kasalukuyang bilis",
+    "choices/c3": "Magmabilis"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "May nag iintay na makatawid sa tawiran ng taong naglalakad. Nakatayo pa sila sa may simento. Ano ang gagawain mo?",
+    "img": "",
+    "answer": "Huminto, hayaan silang makatawid, maghintay",
+    "choices/c1": "Bilisan bago sila makapunta sa tawiran",
+    "choices/c2": "Huminto, hayaan silang makatawid, maghintay",
+    "choices/c3": "Huwag pansinin ang mga ito habang sila ay nasa bangketa pa"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang drayber ng sasakyan na patungong interseksiyon ay dapat magbigay daan sa:",
+    "img": "",
+    "answer": "mga motoristang nasa interseksiyon",
+    "choices/c1": "mga motoristang naroroon na bago pa man makarating sa interseksiyon",
+    "choices/c2": "mga motoristang paparating pa lang sa interseksiyon",
+    "choices/c3": "mga motoristang nasa interseksiyon"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Alin sa mga sumusunod ang HINDI ligtas na lugar sa paglusot o pag-overtake?",
+    "img": "",
+    "answer": "Lahat ng sagot",
+    "choices/c1": "Kapag papalapit sa tulay o kurbada",
+    "choices/c2": "Sa interseksiyon",
+    "choices/c3": "Lahat ng sagot"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang kumikislap na berdeng ilaw ay nangangahulugang:",
+    "img": "",
+    "answer": "Magpatuloy ng may pag-iingat",
+    "choices/c1": "Hinto",
+    "choices/c2": "Magpatuloy ng may pag-iingat",
+    "choices/c3": "Bagalan at maghanda sa paghinto kung saan tumatawid ang taong naglalakad"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang dapat mong gawin kung ikaw ay paparating sa tawiran o daanan ng tao?",
+    "img": "",
+    "answer": "Huminto at magbigay ng daan sa mga tumatawid",
+    "choices/c1": "Bumusina upang huminto ang mga taong tumatawid",
+    "choices/c2": "Huminto at magbigay ng daan sa mga tumatawid",
+    "choices/c3": "Bilisan ang takbo"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang ibig sabihin ng berdeng ilaw pantrapiko na kumukurap-kurap?",
+    "img": "",
+    "answer": "Bagalan ang takbo at magpatuloy nang may pag-iingat",
+    "choices/c1": "Kinakailangan mong ganap na huminto",
+    "choices/c2": "Bagalan ang takbo at magpatuloy nang may pag-iingat",
+    "choices/c3": "Magpatuloy sa kasalukuyang bilis"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang isang putol-putol na puting linya sa dalawang daan na kalsada ay:",
+    "img": "",
+    "answer": "Naghahati sa trapiko na gumagalaw sa magkabilang direksyon",
+    "choices/c1": "Pagdaan o pag-overtake ay maaaring gawain kahit anong oras",
+    "choices/c2": "Walang mag-o-overtake",
+    "choices/c3": "Naghahati sa trapiko na gumagalaw sa magkabilang direksyon"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang magiging kaparusahan kung ang isang drayber ay nahatulan sa krimeng nagawa habang gamit ang sasakyan?",
+    "img": "",
+    "answer": "Babawiin and lisensya at pagmumultahin siya",
+    "choices/c1": "Babawiin and lisensya at pagmumultahin siya",
+    "choices/c2": "Sususpindihin ang lisensya at siya ay pagmumultahin",
+    "choices/c3": "Ang lisensya ay kukumpiskahin"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Pinahihintulutan ng Temporary Operator`s Permit (TOP) ang nahuling drayber na magmaneho ng sasakyan sa loob ng HINDI lalampas sa:",
+    "img": "",
+    "answer": "72 oras",
+    "choices/c1": "72 oras",
+    "choices/c2": "1 linggo",
+    "choices/c3": "15 araw"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Sa basang daan, dapat kang:",
+    "img": "",
+    "answer": "Magmabagal",
+    "choices/c1": "Dagdagan ang iyong bilis",
+    "choices/c2": "patuloy na paggewang",
+    "choices/c3": "Magmabagal"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Sino ang partikular na hindi kasama sa Republic Act No. 10666?",
+    "img": "",
+    "answer": "Batang nangangailangan agad ng atensyong medikal",
+    "choices/c1": "Batang nangangailangan agad ng atensyong medikal",
+    "choices/c2": "Batang kailangang pumunta sa paaralan",
+    "choices/c3": "Lahat ng nabanggit"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ayon sa R.A. 4136, ang Student-driver`s Permit ay maaaring ibigay sa mga may malusog na pangangatawan at pag-iisip at dapat ay hindi bababa sa edad na:",
+    "img": "",
+    "answer": "16 na taong gulang",
+    "choices/c1": "16 na taong gulang",
+    "choices/c2": "18 na taong gulang",
+    "choices/c3": "20 na taong gulang"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang ibig sabihin ng isang paunang babala na may riles ng tren?",
+    "img": "",
+    "answer": "Upang balaan ang mga motorista na may riles ng tren sa unahang bahagi ng kalsada",
+    "choices/c1": "Upang bigyan ng babala kaugnay ng bilis ng kanilang takbo",
+    "choices/c2": "Upang balaan ang mga motorista na HINDI sila maaring pumarada anumang oras",
+    "choices/c3": "Upang balaan ang mga motorista na may riles ng tren sa unahang bahagi ng kalsada"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang traffic light ay nagpalit mula sa berde pa dilaw habang pasangandaan ka. Ano ang dapat mong gawain?",
+    "img": "",
+    "answer": "Huminto bago magsanagndaan",
+    "choices/c1": "Magpatuloy lang sa iyong kasalukuyang bilis",
+    "choices/c2": "Huminto kahit na nasa sangandaan",
+    "choices/c3": "Huminto bago magsanagndaan"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang busina ay para sa:",
+    "img": "",
+    "answer": "Magbigay babala para makaiwas sa disgrasya",
+    "choices/c1": "Pampagising",
+    "choices/c2": "Ingay",
+    "choices/c3": "Magbigay babala para makaiwas sa disgrasya"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang maksimum at pinahihintulutang lapad ng saddle box o bag?",
+    "img": "",
+    "answer": "14 na pulgada mula sa magkabilang gilid",
+    "choices/c1": "14 na pulgada mula sa magkabilang gilid",
+    "choices/c2": "16 na pulgada mula sa magkabilang gilid",
+    "choices/c3": "18 na pulgada mula sa magkabilang gilid"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Maiiwasan at mababawasan ang mga aksidente sa kalsada kung:",
+    "img": "",
+    "answer": "hindi binabale-wala ng mga drayber ang mga senyas pantrapiko na naroroon sa mga partikular na lugar",
+    "choices/c1": "hindi binabale-wala ng mga drayber ang mga senyas pantrapiko na naroroon sa mga partikular na lugar",
+    "choices/c2": "ganap na binabale-wala ng mga drayber ang mga senyas pantrapiko na naroroon sa mga partikular na lugar",
+    "choices/c3": "hindi pinapansin ng mga drayber ang mga senyas pantrapiko sa mga partikular na lugar"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang gagawin mo kung ikaw ay dumating sa interseksiyon na may sirang mga signal pantrapiko?",
+    "img": "",
+    "answer": "Ipagpalagay na ang interseksiyon ay nakasenyas ng �Hinto� sa lahat ng direksiyon",
+    "choices/c1": "Ipagpalagay na ang interseksiyon ay nakasenyas ng �Hinto� sa lahat ng direksiyon",
+    "choices/c2": "Bilisan ang takbo",
+    "choices/c3": "Bagalan ang takbo at hintayin ang traffic enforcer"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang asul na traffic sign ay may nakasulat na �60 km/oras�.  Ano ang gagawin mo?",
+    "img": "",
+    "answer": "Magmaneho sa minimum na bilis na 60 km/oras",
+    "choices/c1": "Magmaneho sa maksimum na bilis na 60 km/oras",
+    "choices/c2": "Magmaneho sa minimum na bilis na 60 km/oras",
+    "choices/c3": "Magmaneho nang 60 minuto kada kilometro"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang tamang senyas ng kamay kung ikaw ay liliko sa kaliwa?",
+    "img": "",
+    "answer": "Ang kaliwang kamay ay nakataas nang patagilid",
+    "choices/c1": "Kanang kamay na nakaturo paibaba",
+    "choices/c2": "Ang kaliwang kamay ay nakataas nang patagilid",
+    "choices/c3": "Kaliwang paa na nakaturo sa baba"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang iyong gagawin kung ika`y patungo sa interseksiyon na may dilaw na ilaw pantrapiko na kukurap-kurap?",
+    "img": "",
+    "answer": "Bagalan at magmaneho nang may pag-iingat",
+    "choices/c1": "Magpatuloy sa iyong kasalukuyang bilis",
+    "choices/c2": "Bagalan at magmaneho nang may pag-iingat",
+    "choices/c3": "Tumigil, magbigay, at magpatuloy kung ligtas"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang ibig sabihin ng paunang babala sa pagtawid sa riles?",
+    "img": "",
+    "answer": "Para balaan ang mga motorista na may lebel ng pagtawid na riles sa unahan",
+    "choices/c1": "Upang bigyan ng abiso ang bilis ng motorista",
+    "choices/c2": "Para balaan ang mga motorista na hindi sila maaring magpumarada kahit kailan",
+    "choices/c3": "Para balaan ang mga motorista na may lebel ng pagtawid na riles sa unahan"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang pag-inom ng mga inuming nakalalasing bago magmaneho ay isa sa mga pangunahing sanhi ng aksidente ng mga sasakyan sapagkat kapag lasing ang drayber, siya ay:",
+    "img": "",
+    "answer": "mayabang, madaldal, at wala sa tamang huwisyo at hindi makakikilos nang tama at ligtas",
+    "choices/c1": "mayabang, madaldal, at wala sa tamang huwisyo at hindi makakikilos nang tama at ligtas",
+    "choices/c2": "kalmado at nakagagawa ng nararapat",
+    "choices/c3": "matalino, relaks lang at nakakikilos nang nararapat"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Nais mong kumaliwa sa krosing na may berdeng ilaw na tumuturo pakaliwa. Maaari ka pa rin bang magpatuloy?",
+    "img": "",
+    "answer": "Oo, maari kang lumiko pakaliwa",
+    "choices/c1": "Oo, maari kang lumiko pakaliwa",
+    "choices/c2": "Hindi. HINDI ka maaring lumiko pakaliwa",
+    "choices/c3": "Hindi. Maghintay hanggang sa maging dilaw ang ilaw pantrapiko"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Alin sa mga sumusunod ang gawaing paglabag sa pavement markings?",
+    "img": "",
+    "answer": "Paghinto at pagbaba ng mga pasahero sa tawiran ng tao",
+    "choices/c1": "Pagbusina",
+    "choices/c2": "Biglaang pagbagal ng takbo habang naka-berdeng ilaw",
+    "choices/c3": "Paghinto at pagbaba ng mga pasahero sa tawiran ng tao"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang mga ambulansiya ang naghahatid sa mga maysakit at nasugatan sa ospital, ang mga trak na pamatay-sunog ang nagpapatay sa sunog, at ang mga sasakyan ng pulis ang naghahatid sa mga pulis na kailangan sa isang sitwasyong may kagipitan (emergency).   Kung",
+    "img": "",
+    "answer": "Magpadaan sa pamamagitan ng pagtabi sa kaliwa o kanan ng daan depende sa kalagayan",
+    "choices/c1": "Harangan ang kanilang daanan at huwag silang padaanin",
+    "choices/c2": "Huwag silang pansinin sapagkat wala kang pakialam sa kanilang trabaho",
+    "choices/c3": "Magpadaan sa pamamagitan ng pagtabi sa kaliwa o kanan ng daan depende sa kalagayan"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kailan lamang maaaring gumamit ng mobile phone habang nagmamaneho ng sasakyan?",
+    "img": "",
+    "answer": "Wala sa mga nabanggit",
+    "choices/c1": "Kung ang tawag ay importante at ang ilaw pantrapiko ay kulay pula",
+    "choices/c2": "Kung ang daloy ng trapiko ay maluwag at ang ilaw pantrapiko ay kulay pula",
+    "choices/c3": "Wala sa mga nabanggit"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang aksyon na ito ay maaaring magdulot sa iyo na mapasagadsad at mawalan ng kontrol kapag gumawa ka ng biglaang paglipat lalo na sa basa at posibleng madulas na kalsada.",
+    "img": "",
+    "answer": "Hindi tamang pagpepreno",
+    "choices/c1": "Hindi tamang pagpepreno",
+    "choices/c2": "lumilikong mabagal",
+    "choices/c3": "Akselerasyong napakabagal"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Habang nagmamaneho ay may ginagawang daan. May pansamantala na pinakamataas na limitasyong bilis na karatula,ano ang gagawain mo?",
+    "img": "",
+    "answer": "Sumunod",
+    "choices/c1": "Sumunod",
+    "choices/c2": "Hindi susunod",
+    "choices/c3": "Sumunod lang kapag makitid ang daan"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Gamit ang backbone na motorsiklo, aling stand ang kailangan mong gamitin kung ikaw ay paparada nang magdamag?",
+    "img": "",
+    "answer": "Stand sa gitna",
+    "choices/c1": "Stand sa gilid",
+    "choices/c2": "Cross stand",
+    "choices/c3": "Stand sa gitna"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kapag kailangan mo ng salamin sa mata para makakita ng maayos, kailan mo dapat itong isuot?",
+    "img": "",
+    "answer": "Kapag nagmamaneho",
+    "choices/c1": "Sa pangit na panahon",
+    "choices/c2": "Sa mabigat na daloy ng trapiko",
+    "choices/c3": "Kapag nagmamaneho"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Sa pagmamaneho sa kalsada, dapat handa ang mga dokumentong ito",
+    "img": "",
+    "answer": "May bisa na DL at updated na Rehistro at Insurance Policy",
+    "choices/c1": "DL at Rehistro at Insurance Policy",
+    "choices/c2": "May bisa na DL at updated na Rehistro at Insurance Policy",
+    "choices/c3": "CPC at Fare Matrix"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang kahulugan ng dobleng linyang dilaw na hindi putol-putol?",
+    "img": "",
+    "answer": "Bawal ang lumusot at tumawid sa linya",
+    "choices/c1": "Tumawid nang maingat",
+    "choices/c2": "Tumawid anumang oras",
+    "choices/c3": "Bawal ang lumusot at tumawid sa linya"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kapag lumiliko sa kanan, dapat mong:",
+    "img": "",
+    "answer": "Manatili sa iyong linya saka i-signal ang iyong pagliko sa kanan kahit 30 metro bago mo gawain ang pagliko",
+    "choices/c1": "Manatili sa iyong linya saka i-signal ang iyong pagliko sa kanan kahit 30 metro bago mo gawain ang pagliko",
+    "choices/c2": "Manatili sa kaliwang linya ng daan saka i-signal ang iyong pagliko sa kanan kahit 15 metro bago mo gawain ang pagliko",
+    "choices/c3": "Manatili sa kanang linya ng daan saka i-signal ang iyong pagliko sa kanan kahit 15 metro bago mo gawain ang pagliko"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang gagawin mo kung ikaw ay paparating sa interseksiyon at ang ilaw pantrapiko ay naging dilaw mula sa kulay na berde?",
+    "img": "",
+    "answer": "Tumigil bago ang interseksiyon o bago ang linya sa paghinto",
+    "choices/c1": "Magpatuloy sa iyong kasalukuyang bilis",
+    "choices/c2": "Tumigil, kahit na nasa interseksiyon",
+    "choices/c3": "Tumigil bago ang interseksiyon o bago ang linya sa paghinto"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang tamang senyas ng kamay kung ikaw ay hihinto?",
+    "img": "",
+    "answer": "Kaliwang kamay na nakaturo paibaba",
+    "choices/c1": "Kaliwang kamay na nakaturo paitaas",
+    "choices/c2": "Kaliwang kamay na nakaturo paibaba at inaalog-alog",
+    "choices/c3": "Kaliwang kamay na nakaturo paibaba"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang tamang senyas ng kamay kung ikaw ay liliko sa kanan?",
+    "img": "",
+    "answer": "Nakataas ang kaliwang kamay at nakaturo pataas",
+    "choices/c1": "Nakataas ang kanang kamay patagilid at nakaturo sa kanan ang kamay",
+    "choices/c2": "Nakataas ang kaliwang kamay at nakaturo pataas",
+    "choices/c3": "Kaliwang kamay na nakaturo paibaba"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ayon sa batas, ano ang nararapat mong gawin kung ikaw ay paparating sa interseksiyon na may senyas na �Stop�?",
+    "img": "",
+    "answer": "Ganap na huminto bago pa dumating sa stop line at magpatuloy kung ligtas nang dumaan",
+    "choices/c1": "Magbigay ng daan kung kinakailangan sa mga sasakyang galing kaliwa papuntang kanan",
+    "choices/c2": "Ganap na huminto bago pa dumating sa stop line at magpatuloy kung ligtas nang dumaan",
+    "choices/c3": "Bagalan ang takbo at magpatuloy kung ligtas nang dumaan"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "May biglang tumawid sa kalsada nang aandar ka na. Ano ang gagawin mo?",
+    "img": "",
+    "answer": "Maghintay hanggang sa makatawid ang tao",
+    "choices/c1": "Bumusina ng isang beses at hayaang tumawid ang tao",
+    "choices/c2": "Maghintay hanggang sa makatawid ang tao",
+    "choices/c3": "Paatrasin ang taong tumatawid"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang sasakyan sa harapan mo ay nag di-dilaw na ilaw. Ang ibig sabihin nito ay",
+    "img": "",
+    "answer": "mabagal na paggalaw",
+    "choices/c1": "sira ito",
+    "choices/c2": "mabagal na paggalaw",
+    "choices/c3": "Kotse ng doktor"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang yellow box pavement marking ay ipinipinta sa loob ng interseksiyon na WALANG sasakyan ang _______.",
+    "img": "",
+    "answer": "pinahihintulutang huminto",
+    "choices/c1": "pinahihintulutang dumaan",
+    "choices/c2": "pinahihintulutang bumusina",
+    "choices/c3": "pinahihintulutang huminto"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "If you encounter emergency vehicles  such as an ambulance, a fire truck  and police cars on the road with sirens on, what should you do?",
+    "img": "",
+    "answer": "Give way by pulling in to the left or right side of the road depending on the circumstances",
+    "choices/c1": "Ignore them since you have NO business interfering with their jobs",
+    "choices/c2": "Give way by pulling in to the left or right side of the road depending on the circumstances",
+    "choices/c3": "Obstruct their passage and NEVER allow them to pass through"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "We must remember that driving on the shoulder of the road is prohibited. When driving going to the same direction, you may pass to the right of a moving car if:",
+    "img": "",
+    "answer": "the highway has two or more lanes moving toward the same direction",
+    "choices/c1": "the highway has two or more lanes moving toward the same direction",
+    "choices/c2": "the highway has two lanes from opposite direction",
+    "choices/c3": "there is room or space beyond the highway"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What should you do if the road is wet?",
+    "img": "",
+    "answer": "Slow down",
+    "choices/c1": "Increase your speed",
+    "choices/c2": "Keep on swerving",
+    "choices/c3": "Slow down"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "You are planning a long journey. Do you need to plan rest stops?",
+    "img": "",
+    "answer": "yes, regular stops help concentration",
+    "choices/c1": "no, you will be less tired if you get there as soon as possible",
+    "choices/c2": "no, only fuel stops will be needed",
+    "choices/c3": "yes, regular stops help concentration"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "A flashing green light means:",
+    "img": "",
+    "answer": "proceed with caution",
+    "choices/c1": "full stop",
+    "choices/c2": "proceed with caution",
+    "choices/c3": "slow down and be ready to stop where a pedestrian may cross the street"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "A driver should always yield to motor vehicles flashing red light and with a siren because they are:",
+    "img": "",
+    "answer": "emergency vehicles",
+    "choices/c1": "large vehicles",
+    "choices/c2": "small vehicles",
+    "choices/c3": "emergency vehicles"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What is the color of a GO traffic light?",
+    "img": "",
+    "answer": "Green",
+    "choices/c1": "Blue",
+    "choices/c2": "Green",
+    "choices/c3": "Yellow/Amber"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "When preparing for a turn, a driver must:",
+    "img": "",
+    "answer": "reduce speed",
+    "choices/c1": "NOT change lane",
+    "choices/c2": "stop six meters from the corner",
+    "choices/c3": "reduce speed"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "If you feel sleepy while driving, it is best to?",
+    "img": "",
+    "answer": "stop, rest, and change driver if possible",
+    "choices/c1": "turn on the radio very loud",
+    "choices/c2": "turn on the air conditioning or open the windows",
+    "choices/c3": "stop, rest, and change driver if possible"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Upon approaching an intersection marked with a yield sign, you are required to:",
+    "img": "",
+    "answer": "slowdown, then enter the intersection when the way is clear",
+    "choices/c1": "stop before entering the intersection",
+    "choices/c2": "slowdown, then enter the intersection when the way is clear",
+    "choices/c3": "enter the intersection immediately"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Where are you NOT allowed to park your vehicle?",
+    "img": "",
+    "answer": "6 meters from the intersection",
+    "choices/c1": "7 meters from the intersection",
+    "choices/c2": "6 meters from the intersection",
+    "choices/c3": "8 meters from the intersection"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Why are rumble strips painted across the road?",
+    "img": "",
+    "answer": "to make you aware of your speed",
+    "choices/c1": "to help you keep the correct separation distance",
+    "choices/c2": "to help you choose the correct lane",
+    "choices/c3": "to make you aware of your speed"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "You may drive over a pathway",
+    "img": "",
+    "answer": "to get into a property",
+    "choices/c1": "if no pedestrian are near",
+    "choices/c2": "to get into a property",
+    "choices/c3": "to overtake slow-moving traffic"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "If in violation of the Republic Act No. 10666 on Safety of Children Aboard Motorcycle, resulted in to death or serious or less serious injuries, what penalty will be imposed to the motorcycle rider or motorcycle operator?",
+    "img": "",
+    "answer": "one (1) year imprisonment without prejudice provided under Revised Penal Code",
+    "choices/c1": "one (1) year imprisonment without prejudice provided under Revised Penal Code",
+    "choices/c2": "six (6) months imprisonment",
+    "choices/c3": "five (5) year imprisonment"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What is the allowable capacity of a top box?",
+    "img": "",
+    "answer": "Two full-face helmets",
+    "choices/c1": "Two full-face helmets",
+    "choices/c2": "Three half-face helmets",
+    "choices/c3": "four full-face helmets"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Which of the traffic lights requires you to prepare for a stop?",
+    "img": "",
+    "answer": "Yellow/Amber",
+    "choices/c1": "Yellow/Amber",
+    "choices/c2": "Green",
+    "choices/c3": "Red"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Under what circumstances it is permissible to park in front of a hospital entrance?",
+    "img": "",
+    "answer": "none",
+    "choices/c1": "if you are collecting a patient",
+    "choices/c2": "none",
+    "choices/c3": "if you are employed by the hospital"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "You were invited to a dinner party. You know that you will have to drive afterwards. What is your best course of action?",
+    "img": "",
+    "answer": "not drink any alcohol at all",
+    "choices/c1": "eat a hot meal with your alcoholic drink",
+    "choices/c2": "avoid mixing your alcoholic drinks",
+    "choices/c3": "not drink any alcohol at all"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "You approach an intersection with a set of traffic signals. The signals are blank. What should you do?",
+    "img": "",
+    "answer": "treat the intersections as you would if there were STOP signs in all directions",
+    "choices/c1": "treat the intersections as you would if there were STOP signs in all directions",
+    "choices/c2": "stop at the intersection as if you have a red light",
+    "choices/c3": "slow down and prepare to yield to any traffic ahead"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "A student-driver is NOT allowed to:",
+    "img": "",
+    "answer": "drive WITHOUT student-driver`s permit",
+    "choices/c1": "drive WITHOUT student-driver`s permit",
+    "choices/c2": "drive WITHOUT a qualified instructor",
+    "choices/c3": "all of the above"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Can you stay within the intersection?",
+    "img": "",
+    "answer": "Never, intersection must be clear at all times",
+    "choices/c1": "Yes, when the traffic light is red",
+    "choices/c2": "Yes, when you are stationary in a queue of traffic",
+    "choices/c3": "Never, intersection must be clear at all times"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Riding a manual clutch backbone motorcycle, a dog suddenly runs across your way and you were shocked. Which foot should you use to attain a maximum brake in order not to hit the dog?",
+    "img": "",
+    "answer": "Right",
+    "choices/c1": "Left",
+    "choices/c2": "Right",
+    "choices/c3": "Both"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What should be done first before changing lanes?",
+    "img": "",
+    "answer": "make signal",
+    "choices/c1": "make signal",
+    "choices/c2": "check the traffic ahead",
+    "choices/c3": "check mirrors for traffic behind"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "When turning right from an intersection into the one-way street, which lane should you choose?",
+    "img": "",
+    "answer": "Upon turning right, stay on the rightmost lane",
+    "choices/c1": "Upon turning right, stay on the rightmost lane",
+    "choices/c2": "Upon turning right, stay on the innermost lane",
+    "choices/c3": "Upon turning right, stay on the center of the road"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "To help reduce air pollution using your brake, what should you do?",
+    "img": "",
+    "answer": "Brake properly",
+    "choices/c1": "Brake properly",
+    "choices/c2": "Brake frequently",
+    "choices/c3": "Brake suddenly"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What does the law require you to do upon approaching an intersection with a stop sign?",
+    "img": "",
+    "answer": "stop and proceed when it is safe to do so",
+    "choices/c1": "yield right-of-way if necessary to vehicles approaching from left to right",
+    "choices/c2": "stop and proceed when it is safe to do so",
+    "choices/c3": "slow down and proceed when it is safe to do so"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Is it true that a steady red traffic light means you must come to a complete stop until the intersection is clear to proceed?",
+    "img": "",
+    "answer": "False",
+    "choices/c1": "True",
+    "choices/c2": "False",
+    "choices/c3": "No answer"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Who has he right-of-way when more than one driver arrive at a four-way stop?",
+    "img": "",
+    "answer": "the first driver to stop should be the first to go",
+    "choices/c1": "the first driver to stop should be the first to go",
+    "choices/c2": "the last driver to stop should be the first to go",
+    "choices/c3": "the driver of the larger vehicle should be the first to go"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Ambulance conveys sick and injured persons to hospitals, fire engines help put out fires, and police vehicles carry police personnel whose presence is much needed in an emergency. If you encounter any of them on the road with sirens on, what would you do?",
+    "img": "",
+    "answer": "Give way by pulling in to the left or right side of the road depending on the circumstances",
+    "choices/c1": "Obstruct their passage and never allow them to pass through",
+    "choices/c2": "Ignore them since you have no business interfering with their jobs",
+    "choices/c3": "Give way by pulling in to the left or right side of the road depending on the circumstances"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "As a driver you can cause MORE damage to the environment by",
+    "img": "",
+    "answer": "accelerating as quickly as possible",
+    "choices/c1": "accelerating as quickly as possible",
+    "choices/c2": "choosing a fuel efficient vehhicle",
+    "choices/c3": "having your vehicle regularly serviced"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Whenever you are driving and you have to make or answer a call on your cellular phone and you do NOT have a hands-free attachment, you should:",
+    "img": "",
+    "answer": "pull over to the side of the road at a safe location and make the call",
+    "choices/c1": "make the call right away",
+    "choices/c2": "pull over to the side of the road at a safe location and make the call",
+    "choices/c3": "answer the call while driving"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Double solid yellow lines:",
+    "img": "",
+    "answer": "should NOT be crossed anytime",
+    "choices/c1": "should NOT be crossed anytime",
+    "choices/c2": "should NOT be crossed except with due care",
+    "choices/c3": "neither of the selections"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Single white broken line on a two-way road means:",
+    "img": "",
+    "answer": "it separates traffic moving in opposite directions",
+    "choices/c1": "passing or overtaking can be made anytime",
+    "choices/c2": "it separates traffic moving in opposite directions",
+    "choices/c3": "absolutely NO crossing"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "If you are under the influence of liquor while driving, you are most likely to ______________________.",
+    "img": "",
+    "answer": "react slower",
+    "choices/c1": "make a sound decision",
+    "choices/c2": "think better",
+    "choices/c3": "react slower"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "This traffic sign means ``Yield the right-of-way``:",
+    "img": "",
+    "answer": "inverted triangle",
+    "choices/c1": "inverted triangle",
+    "choices/c2": "vertical triangle",
+    "choices/c3": "horizontal triangle"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "On which of these circumstances should you NOT attempt to make an overtake?",
+    "img": "",
+    "answer": "on a blind curve",
+    "choices/c1": "at night time",
+    "choices/c2": "when iot`s raining",
+    "choices/c3": "on a blind curve"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What should be the color of the blinkers for a slow-moving long vehicle?",
+    "img": "",
+    "answer": "Yellow/amber",
+    "choices/c1": "Blue",
+    "choices/c2": "Yellow/amber",
+    "choices/c3": "Red"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "If you encounter emergency vehicles  such as ambulance, fire truck  and police car on the road with sirens on, what would you do?",
+    "img": "",
+    "answer": "give way by pulling in to the left or right side of the road depending on the circumstances",
+    "choices/c1": "ignore them since you have no business interfering with their jobs",
+    "choices/c2": "give way by pulling in to the left or right side of the road depending on the circumstances",
+    "choices/c3": "obstruct their passage and never allow them to pass through"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Lines, symbols, and wordings painted on the roadway are called __________________.",
+    "img": "",
+    "answer": "pavement markings",
+    "choices/c1": "traffic signals",
+    "choices/c2": "pavement markings",
+    "choices/c3": "traffic hazards"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "At crossroads, there are no signs or road markings. Two vehicles are approaching, which has priority?",
+    "img": "",
+    "answer": "neither vehicle",
+    "choices/c1": "the vehicle travelling the fastes",
+    "choices/c2": "the vehicle on the widest road",
+    "choices/c3": "neither vehicle"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "As you approach an intersection, the traffic light changes from green to yellow. What should you do?",
+    "img": "",
+    "answer": "Stop before the intersection or before a stop line",
+    "choices/c1": "keep going at your current speed",
+    "choices/c2": "Stop, even if you are inside the intersection",
+    "choices/c3": "Stop before the intersection or before a stop line"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "As a rider, you can cause more damage to the environment when you _______________________________.",
+    "img": "",
+    "answer": "accelerate as quickly as possible",
+    "choices/c1": "accelerate as quickly as possible",
+    "choices/c2": "choose a fuel efficient vehicle",
+    "choices/c3": "have your vehicle regularly serviced"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "A U-Turn is used to reverse direction. Which of the following is permitted?",
+    "img": "",
+    "answer": "if no vehicle approaching on the other side that may result to obstruction or worst accident",
+    "choices/c1": "where a no U-Turn sign is posted",
+    "choices/c2": "in a one-way street",
+    "choices/c3": "if no vehicle approaching on the other side that may result to obstruction or worst accident"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What should you do whenever you are driving on a highway with a lot of potholes?",
+    "img": "",
+    "answer": "Decrease speed",
+    "choices/c1": "Increase speed",
+    "choices/c2": "Decrease speed",
+    "choices/c3": "Always change lane"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "When should you signal if you want to make a right turn?",
+    "img": "",
+    "answer": "Before making the turn",
+    "choices/c1": "during the turn",
+    "choices/c2": "After making the turn",
+    "choices/c3": "Before making the turn"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What is the penalty if a driver is convicted of a crime while using a motor vehicle?",
+    "img": "",
+    "answer": "The DL will be revoked and the driver will pay a fine",
+    "choices/c1": "The DL will be revoked and the driver will pay a fine",
+    "choices/c2": "The DL will be suspended and the driver will pay a fine",
+    "choices/c3": "The DL will be confiscated"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "You are planning a long trip. Do you need to plan rest stops?",
+    "img": "",
+    "answer": "Yes, regular stops help avoid mental and physical fatigue",
+    "choices/c1": "No, you will arrive to your destination faster",
+    "choices/c2": "No, only fuel stops will be needed",
+    "choices/c3": "Yes, regular stops help avoid mental and physical fatigue"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "When turning left, where should you position your motorcycle?",
+    "img": "",
+    "answer": "Nearest to the center of the highway",
+    "choices/c1": "To the nearest curb of the highway",
+    "choices/c2": "Nearest to the center of the highway",
+    "choices/c3": "Nearest to the edge line of the highway"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "A flashing yellow signal light indicates that you should:",
+    "img": "",
+    "answer": "slow down and proceed when safe",
+    "choices/c1": "slow down and proceed when safe",
+    "choices/c2": "maintain your current speed",
+    "choices/c3": "accelerate your speed"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Which of the following signs state regulations, if disregarded, will constitute an offense?",
+    "img": "",
+    "answer": "Regulatory signs",
+    "choices/c1": "Regulatory signs",
+    "choices/c2": "Warning signs",
+    "choices/c3": "Informative signs"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Changing lanes at an intersection is:",
+    "img": "",
+    "answer": "unsafe",
+    "choices/c1": "very safe",
+    "choices/c2": "safe",
+    "choices/c3": "unsafe"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "If you need eyeglasses in order to see clearly, when should you wear them?",
+    "img": "",
+    "answer": "in all driving conditions",
+    "choices/c1": "in poor weather",
+    "choices/c2": "in busy traffic",
+    "choices/c3": "in all driving conditions"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "When should you especially check the engine oil level?",
+    "img": "",
+    "answer": "before a long journey",
+    "choices/c1": "every 600 km",
+    "choices/c2": "before a long journey",
+    "choices/c3": "early in the morning"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What is the meaning of a square or rectangle traffic sign with blue and white color?",
+    "img": "",
+    "answer": "informatie sign",
+    "choices/c1": "giving direction",
+    "choices/c2": "Warning sign",
+    "choices/c3": "informatie sign"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What should be the length of your saddle box or bag?",
+    "img": "",
+    "answer": "Length must NOT exceed the tail end",
+    "choices/c1": "Length must NOT exceed the tail end by more than six inches",
+    "choices/c2": "Length must NOT exceed the tail end",
+    "choices/c3": "Length must NOT exceed the raider`s seat"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What is the correct hand signal when turning left?",
+    "img": "",
+    "answer": "Left arm held sideward",
+    "choices/c1": "Right arm held down",
+    "choices/c2": "Left arm held sideward",
+    "choices/c3": "Left foot pointing on the ground"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "How many days do you need to settle a traffic violation with LTO to avoid suspension?",
+    "img": "",
+    "answer": "Within 15 days",
+    "choices/c1": "Within 15 days",
+    "choices/c2": "Within 10 days",
+    "choices/c3": "Within 30 days"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What is the effect of failing to switch off the turn-signal light after turning from an intersection?",
+    "img": "",
+    "answer": "It will create confusion to all concerned road users",
+    "choices/c1": "It will create confusion to all concerned road users",
+    "choices/c2": "It will create confusion among motorists",
+    "choices/c3": "It will create confusion among traffic enforcer"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What is the use of turn signal lights?",
+    "img": "",
+    "answer": "To make your intentions known to drivers and other road users around you",
+    "choices/c1": "To keep steady speed on the road especially when the road condition is not good",
+    "choices/c2": "To make your intentions known to drivers and other road users around you",
+    "choices/c3": "To light your way while driving and parking your vehicle at night"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Under RA 10666 also known as Children`s Safety on Motorcycle Act of 2015, when is the child allowed to backride on a motorcycle?",
+    "img": "",
+    "answer": "If the child requires immediate medical attention",
+    "choices/c1": "If there are more than one backride",
+    "choices/c2": "If the child requires immediate medical attention",
+    "choices/c3": "If the child can sit/stand in front of the rider"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "How does alcohol affect you?",
+    "img": "",
+    "answer": "It reduces your concentration",
+    "choices/c1": "It speeds up your reaction",
+    "choices/c2": "It improves your coordination",
+    "choices/c3": "It reduces your concentration"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What is the meaning of `beating the red light`?",
+    "img": "",
+    "answer": "Driving faster upon seeing a yellow/amber light",
+    "choices/c1": "Driving faster upon seeing a yellow/amber light",
+    "choices/c2": "Stopping on the green light",
+    "choices/c3": "Stopping suddenly"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Under R.A. 10666, which of the following prohibits the rider to convey a child?",
+    "img": "",
+    "answer": "Where a speed limit of more than 60 kph is imposed",
+    "choices/c1": "Where a speed limit of more than 40 kph is imposed",
+    "choices/c2": "Where a speed limit of more than 50 kph is imposed",
+    "choices/c3": "Where a speed limit of more than 60 kph is imposed"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What should you do whenever you are driving on a highway with a lot of potholes?",
+    "img": "",
+    "answer": "Decrease speed",
+    "choices/c1": "Increase speed",
+    "choices/c2": "Decrease speed",
+    "choices/c3": "Always change lane"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Using a backbone motorcycle, which stand do you need to use when parking overnight?",
+    "img": "",
+    "answer": "Center stand",
+    "choices/c1": "Side stand",
+    "choices/c2": "Cross stand",
+    "choices/c3": "Center stand"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Under R.A. 10666 also known as Children`s Safety on Motorcycle Act, the child must grasp the rider`s waist, step and rest his/her feet comfortably on the foot peg, and ______________.",
+    "img": "",
+    "answer": "he/she must wear a standard protective helmet",
+    "choices/c1": "he/she must be at least five(5) feet in height",
+    "choices/c2": "he/she must wear a standard protective helmet",
+    "choices/c3": "he/she must have parent`s consent"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "When do you need to check your engine oil level?",
+    "img": "",
+    "answer": "When the engine is cold",
+    "choices/c1": "When the engine is hot",
+    "choices/c2": "When the engine is running",
+    "choices/c3": "When the engine is cold"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Why are rumble strips installed across the road?",
+    "img": "",
+    "answer": "To make you alert and aware of your speed",
+    "choices/c1": "To help you keep the correct separation distance",
+    "choices/c2": "To help you choose the correct lane",
+    "choices/c3": "To make you alert and aware of your speed"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "You arrive at a crossroad. You want to turn left, and you have a green arrow light. Can you proceed?",
+    "img": "",
+    "answer": "Yes, you can turn left, as this is a `protected` turn where no other cars are allowed to enter the intersection",
+    "choices/c1": "Yes, you can turn left, as this is a `protected` turn where no other cars are allowed to enter the intersection",
+    "choices/c2": "No, you cannot turn left unless you have a green left pointing arrow",
+    "choices/c3": "Yes, you can turn left, however you may still need to yield to pedestrians and incoming traffic"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "When is it legal to use the shoulder of a road when overtaking another vehicle?",
+    "img": "",
+    "answer": "During normal circumstances, you are not legally allowed to pass using the shoulder of a road",
+    "choices/c1": "When the vehicle in front of you is making a right turn",
+    "choices/c2": "When the vehicle in front of you is visibly signaling to make a left turn",
+    "choices/c3": "During normal circumstances, you are not legally allowed to pass using the shoulder of a road"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "You should not use a mobile phone while riding a motorcycle because:",
+    "img": "",
+    "answer": "it is prohibited by law and it distracts your attention while driving",
+    "choices/c1": "reception is poor when the engine is running",
+    "choices/c2": "it will affect your vehicle`s electronic system",
+    "choices/c3": "it is prohibited by law and it distracts your attention while driving"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "When do you need to switch on your turn signal?",
+    "img": "",
+    "answer": "Before turning",
+    "choices/c1": "After turning",
+    "choices/c2": "While turning",
+    "choices/c3": "Before turning"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "You are entering an area of roadworks where there is a temporary `No Overtaking` sign. You must:",
+    "img": "",
+    "answer": "follow the sign as advised",
+    "choices/c1": "obey the sign only during rush hour",
+    "choices/c2": "follow the sign as advised",
+    "choices/c3": "obey only when a traffic enforcer is on duty"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "How much is the penalty for the second offenses of R.A. 10666 Children`s Safety on Motorcycle Act of 2015?",
+    "img": "",
+    "answer": "Php 5,000.00",
+    "choices/c1": "Php 1,000.00",
+    "choices/c2": "Php 5,000.00",
+    "choices/c3": "Php 7,000.00"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "When a driver sees the yellow light signal changes to red, a vehicle is already in the intersection to turn left or right may __________.",
+    "img": "",
+    "answer": "continue to proceed through the intersection even if the light on the signal to the left / right is red",
+    "choices/c1": "slow down to allow other vehicles to proceed",
+    "choices/c2": "stop automatically on the road",
+    "choices/c3": "continue to proceed through the intersection even if the light on the signal to the left / right is red"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Motorcycle riders must exercise safety and care at all times. To do so, they are required to wear:",
+    "img": "",
+    "answer": "standard protective helmets",
+    "choices/c1": "helmets intended for construction works",
+    "choices/c2": "standard protective helmets",
+    "choices/c3": "a policeman cap or gloves"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "In case a road crash involving physical injury, the first duty of the involved driver is:",
+    "img": "",
+    "answer": "attend to the injured person and call for help",
+    "choices/c1": "attend to the injured person and call for help",
+    "choices/c2": "report the incident to a hospital",
+    "choices/c3": "report the incident to the nearest police station"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "You service your own vehicle. How should you get rid of the old engine oil?",
+    "img": "",
+    "answer": "Dispose it properly",
+    "choices/c1": "Tip it into a hole in the ground",
+    "choices/c2": "Dispose it properly",
+    "choices/c3": "Put it into your dust bin"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What is the maximum and allowable with of the saddle box or bag?",
+    "img": "",
+    "answer": "14 inches from both sides",
+    "choices/c1": "14 inches from both sides",
+    "choices/c2": "16 inches from both sides",
+    "choices/c3": "18 inches from both sides"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "When more than one driver arrived at a four-way stop, who has the right-of-way?",
+    "img": "",
+    "answer": "The driver who arrived first should be the first to go",
+    "choices/c1": "The driver who arrived first should be the first to go",
+    "choices/c2": "The last driver to arrive should be the first to go",
+    "choices/c3": "The driver of the larger vehicle should be the first to go"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "The vehicle is parked if:",
+    "img": "",
+    "answer": "it is at stand and the engine is turned off",
+    "choices/c1": "it is not moving while loading passengers",
+    "choices/c2": "it is not moving while unloading passengers",
+    "choices/c3": "it is at stand and the engine is turned off"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Single white broken line on a two (2) way lane road means:",
+    "img": "",
+    "answer": "it separates traffic moving in opposite directions",
+    "choices/c1": "passing or overtaking can be made anytime",
+    "choices/c2": "absolutely no overtaking",
+    "choices/c3": "it separates traffic moving in opposite directions"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What should be done first before changing lanes?",
+    "img": "",
+    "answer": "Check the traffic ahead and make signal",
+    "choices/c1": "Make a quick change of lane",
+    "choices/c2": "Check the traffic ahead and make signal",
+    "choices/c3": "Blow your horn then carefully change lane"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "It is more dangerous to turn left than to turn right because _________.",
+    "img": "",
+    "answer": "vehicles coming from opposite direction are faster",
+    "choices/c1": "the road has lanes",
+    "choices/c2": "vehicles coming from opposite direction are faster",
+    "choices/c3": "there are more vendors on the right side of the road"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Who is responsible for not overloading vehicle?",
+    "img": "",
+    "answer": "The driver or rider of the vehicle",
+    "choices/c1": "The driver or rider of the vehicle",
+    "choices/c2": "The person who loaded the vehicle",
+    "choices/c3": "The owner of the vehicle"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What is the appropriate action if you feel sleepy while driving?",
+    "img": "",
+    "answer": "Park at a rest stop and rest",
+    "choices/c1": "Turn on the radio very loudly",
+    "choices/c2": "Drive faster",
+    "choices/c3": "Park at a rest stop and rest"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What must you do at a flashing yellow traffic signal?",
+    "img": "",
+    "answer": "Drive with caution, consider it as a `Give Way` sign",
+    "choices/c1": "This signal tells you that you cannot turn at this intersection, so continue on straight",
+    "choices/c2": "Drive with caution, consider it as a `Give Way` sign",
+    "choices/c3": "Stop, yield, and proceed when safe"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Drinking alcohol before driving is one of the major causes of vehicular road crash because when a driver is drunk he/she is:",
+    "img": "",
+    "answer": "arrogant, talkative, with poor judgment and reflexes to perform things safely",
+    "choices/c1": "arrogant, talkative, with poor judgment and reflexes to perform things safely",
+    "choices/c2": "calm, relaxed, and able to perform things accordingly",
+    "choices/c3": "able to talk intelligently and coherently and give every appearance of sobriety"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Someone is waiting to cross at pedestrian crossing. They are standing on the pavements. You should normally:",
+    "img": "",
+    "answer": "stop, let them cross, wait patiently",
+    "choices/c1": "go on quickly before they step onto the crossing",
+    "choices/c2": "stop, let them cross, wait patiently",
+    "choices/c3": "ignore them as they are still on the pavements"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "When being overtaken by a car, what should you do?",
+    "img": "",
+    "answer": "Stay with the current speed",
+    "choices/c1": "Increase speed to avoid being overtaken",
+    "choices/c2": "Stay with the current speed",
+    "choices/c3": "Press on the brake and allow the overtaking vehicle to pass"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "The mandate of LTO is to register roadworthy and emission-compliant motor vehicles, put order on the roads, and to __________.",
+    "img": "",
+    "answer": "license quality drivers",
+    "choices/c1": "observe cleanliness on the road",
+    "choices/c2": "license quality drivers",
+    "choices/c3": "formulate franchising guidelines of PUVs"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Changing lanes at an intersection is:",
+    "img": "",
+    "answer": "unsafe",
+    "choices/c1": "very safe",
+    "choices/c2": "safe",
+    "choices/c3": "unsafe"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Parking is allowed if the vehicle is:",
+    "img": "",
+    "answer": "beyond 4 meters of a fire hydrant",
+    "choices/c1": "beyond 4 meters of a fire hydrant",
+    "choices/c2": "within 3 meters of the intersection of curve lines",
+    "choices/c3": "within an intersection"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Under which of these circumstances it is permissible to use a mobile phone while driving a motor vehicle?",
+    "img": "",
+    "answer": "None of the above",
+    "choices/c1": "If it is an important call",
+    "choices/c2": "If the traffic is light",
+    "choices/c3": "None of the above"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "The choice of the speed may depend on the:",
+    "img": "",
+    "answer": "all of the above",
+    "choices/c1": "roadworthiness of the motor vehicle being driven",
+    "choices/c2": "skills of the driver",
+    "choices/c3": "all of the above"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What should you do if a railroad crossing has no warning devices?",
+    "img": "",
+    "answer": "Slow down, check left and right of the railroad, and then proceed with caution if clear",
+    "choices/c1": "Increase your speed and cross the tracks quickly but do not forget to wear helmet",
+    "choices/c2": "Stop within 15 feet of the railroad crossing, get out of the vehicle, walk through the railroad and check if it is clear",
+    "choices/c3": "Slow down, check left and right of the railroad, and then proceed with caution if clear"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "A vehicle that enters a roadway from a driveway, alley, or a private road:",
+    "img": "",
+    "answer": "must stop and yield the right-of-way to traffic on the roadway and pedestrians",
+    "choices/c1": "must stop and yield the right-of-way to traffic on the roadway and pedestrians",
+    "choices/c2": "has the right-of-way to traffic from all directions",
+    "choices/c3": "has the right-of-way to traffic especially from the left side of the street"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "After turning right from an intersection into a one-way street, which lane should you choose?",
+    "img": "",
+    "answer": "Stay on the rightmost lane",
+    "choices/c1": "Stay on the rightmost lane",
+    "choices/c2": "Stay on the innermost lane",
+    "choices/c3": "Stay on the center of the road"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "The Temporary Operator`s Permit (TOP) authorizes the apprehended driver to operate motor vehicle for a period not exceeding:",
+    "img": "",
+    "answer": "72 hours",
+    "choices/c1": "72 hours",
+    "choices/c2": "1 week",
+    "choices/c3": "15 days"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Road rage is violent anger caused by the stress and frustration involved in driving a motor vehicle in difficult conditions, especially when the driver is experiencing ________.",
+    "img": "",
+    "answer": "heavy traffic of gridlock",
+    "choices/c1": "heavy traffic of gridlock",
+    "choices/c2": "happiness and wellness",
+    "choices/c3": "light traffic along a busy road"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "You may drive over a pathway ____________.",
+    "img": "",
+    "answer": "to get into a property",
+    "choices/c1": "if no pedestrian are near",
+    "choices/c2": "to get into a property",
+    "choices/c3": "to overtake slow-moving traffic"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What does the law require you to do upon approaching an intersection with a stop sign?",
+    "img": "",
+    "answer": "Stop and proceed when it is safe to do so",
+    "choices/c1": "Yield right-of-way if necessary to vehicles approaching from left to right",
+    "choices/c2": "Stop and proceed when it is safe to do so",
+    "choices/c3": "Slow down and proceed when it is safe to do so"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "A blue traffic sign says ``60 kph``. What should you do?",
+    "img": "",
+    "answer": "Drive at a minimum of 60 kph",
+    "choices/c1": "Drive at a maximum of 60 kph",
+    "choices/c2": "Drive at a minimum of 60 kph",
+    "choices/c3": "Drive at 60 minutes per kilometer"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What should you do when the brake lights of the vehicle in front of you activates?",
+    "img": "",
+    "answer": "Prepare to brake",
+    "choices/c1": "Prepare to brake",
+    "choices/c2": "Press the horn",
+    "choices/c3": "Turn right or left"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "Where should you position your vehicle when you are planning to turn left into a minor road?",
+    "img": "",
+    "answer": "On the leftmost part off the road",
+    "choices/c1": "In the middle of the road",
+    "choices/c2": "On the rightmost part of the road",
+    "choices/c3": "On the leftmost part off the road"
+  },
+  {
+    "language": "english",
+    "category": "np_motorcycle",
+    "question": "What do you mean by `double white line` line?",
+    "img": "",
+    "answer": "Separating lanes of traffic moving from opposite direction",
+    "choices/c1": "To pass a vehicle that is towing a trailer",
+    "choices/c2": "To pass traffic is queuing back at junction",
+    "choices/c3": "Separating lanes of traffic moving from opposite direction"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kung higit sa isang drayber ang dumating sa four-way stop, sino sa kanila ang may karapatan sa daan?",
+    "img": "",
+    "answer": "Ang drayber na unang dumating ang siyang unang dapat na umandar",
+    "choices/c1": "Ang drayber na unang dumating ang siyang unang dapat na umandar",
+    "choices/c2": "Ang drayber na huling dumating ang siyang unang dapat na umandar",
+    "choices/c3": "Ang drayber ng higit na malaking sasakyan ang siyang unang dapat na umandar"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang dapat gawin kapag nagmamaneho sa highway na may maraming lubak?",
+    "img": "",
+    "answer": "Bagalan ang takbo",
+    "choices/c1": "Bilisan ang takbo",
+    "choices/c2": "Bagalan ang takbo",
+    "choices/c3": "Palaging lumipat ng daan o lane"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kailan ka maaaring mag-hintay sa dilaw o yellow box sa sangandaan?",
+    "img": "",
+    "answer": "Hindi kailanman, ang sangandaan ay dapat malinis sa lahat ng oras",
+    "choices/c1": "Kapag ang traffic light ay pula",
+    "choices/c2": "Kapag nakatigil ka sa daloy ng trapiko",
+    "choices/c3": "Hindi kailanman, ang sangandaan ay dapat malinis sa lahat ng oras"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Sino ang may prayoridad sa interseksiyon kung may dalawang sasakyan na dumating?",
+    "img": "",
+    "answer": "Ang sasakyang nasa kanan ang may prayoridad",
+    "choices/c1": "Ang sasakyang nasa kaliwa ang prayoridad",
+    "choices/c2": "May prayoridad ang higit na malaking sasakyan",
+    "choices/c3": "Ang sasakyang nasa kanan ang may prayoridad"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kung liliko pakanan, nararapat na:",
+    "img": "",
+    "answer": "bagalan ang takbo, manatili sa pinakalabas na bahagi ng daan at mag-signal upang lumiko sa kanan",
+    "choices/c1": "bagalan ang takbo, manatili sa pinakalabas na bahagi ng daan at mag-signal upang lumiko sa kanan",
+    "choices/c2": "manatili sa kaliwang daan ng kalsada at mag-signal upang lumiko sa kanan 15 metro bago lumiko",
+    "choices/c3": "manatili sa kanang daan ng kalsada at mag-signal upang lumiko sa kanan 30 metro bago lumiko"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang drayber ay nararapat na laging magbigay ng daan sa mga sasakyang may blinkers at sirena na nakabukas dahil sila ay:",
+    "img": "",
+    "answer": "sasakyang tumutugon sa gipit na kalagayan/emergency",
+    "choices/c1": "malalaking sasakyan",
+    "choices/c2": "maliliit na sasakyan",
+    "choices/c3": "sasakyang tumutugon sa gipit na kalagayan/emergency"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang traffic sign na `No Stopping` ay nangangahulugan na:",
+    "img": "",
+    "answer": "hindi ka maaaring huminto maliban kung pinahihinto ng traffic enforcers",
+    "choices/c1": "maaari kang huminto sandali kung magsasakay o magbababa ng pasahero ng mabilis",
+    "choices/c2": "hindi maaaring huminto maliban kung tatanggap ng tawag",
+    "choices/c3": "hindi ka maaaring huminto maliban kung pinahihinto ng traffic enforcers"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Totoo ba na ang di kumikilos na pulang trapikong ilaw ay nangangahulugang dapat kang huminto hanggang ang sangandaan ay maging maaliwalas para magpatuloy?",
+    "img": "",
+    "answer": "Hindi totoo",
+    "choices/c1": "Totoo",
+    "choices/c2": "Hindi totoo",
+    "choices/c3": "Walang sagot"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang ibig sabihin ng dobleng puting putol-putol na linya sa daan ay:",
+    "img": "",
+    "answer": "pwede kang mag-overtake sa kaliwa o sa kanan kapag walang panganib",
+    "choices/c1": "bawal na mag-overtake sa kaliwang parte",
+    "choices/c2": "bawal na mag-overtake sa kanang parte",
+    "choices/c3": "pwede kang mag-overtake sa kaliwa o sa kanan kapag walang panganib"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Sa panahon ng pagkakasakit, ang iyong kakayahan sa pagmamaneho ay maaaring humina. Nararapat na ikaw ay:",
+    "img": "",
+    "answer": "maging malusog sa pangangatawan at pag-iisip at huwag magmaneho pagkatapos uminom ng gamot",
+    "choices/c1": "uminom lamang ng mababang dose ng anumang uri ng gamot sa lahat ng panahon para masigurado ang kaligtasan",
+    "choices/c2": "laging bisitahin ang iyong doktor bago magmaneho, lalo na sa mahahabang biyahe",
+    "choices/c3": "maging malusog sa pangangatawan at pag-iisip at huwag magmaneho pagkatapos uminom ng gamot"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang drayber ng motorsiklo ay dapat palaging nag-iingat. Upang magawa ito, sila ay nangangailangan na nakasuot ng:",
+    "img": "",
+    "answer": "standard protective helmets",
+    "choices/c1": "mga helmet na laan sa trabahong pang-konstruksyon",
+    "choices/c2": "standard protective helmets",
+    "choices/c3": "sombrero ng police o gloves"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang U-turn ay ginagamit para baguhin ang direksyon. Alin sa mga sumusunod ang pinapayagan?",
+    "img": "",
+    "answer": "Kung walang sasakyan na paparating sa kabilang panig na magreresulta ng sagabal o masamang aksidente",
+    "choices/c1": "Kung saan walang U-turn sign na nakalagay",
+    "choices/c2": "Sa one-way na kalye",
+    "choices/c3": "Kung walang sasakyan na paparating sa kabilang panig na magreresulta ng sagabal o masamang aksidente"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang pagmamaneho ng higit na mabilis sa itinakdang bilis ay:",
+    "img": "",
+    "answer": "ito ay ipinagbabawal ng batas maliban na lamang kung may emergency",
+    "choices/c1": "pinapayagan lamang kung mga-o-overtake sa isa pang sasakyan",
+    "choices/c2": "pinapayagan lamang kung ang ibang sasakyan ay magpapatakbo ng higit na mabilis sa itinakdang bilis",
+    "choices/c3": "ito ay ipinagbabawal ng batas maliban na lamang kung may emergency"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Magkano ang parusa para sa pangalawang opensa ng R.A. 10666 Children`s Safety on Motorcycle Act of 2015?",
+    "img": "",
+    "answer": "Php 5,000",
+    "choices/c1": "Php 1,000",
+    "choices/c2": "Php 5,000",
+    "choices/c3": "Php 7,000"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Paano ka naaapektuhan ng alak?",
+    "img": "",
+    "answer": "Pinapababa nito ang iyong konsentrasyon",
+    "choices/c1": "Pinabibilis nito ang iyong reaksyon",
+    "choices/c2": "Pinabubuti nito ang iyong koordinasyon",
+    "choices/c3": "Pinapababa nito ang iyong konsentrasyon"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang mga linya, simbolo, at mga salitang nakapinta sa kalsada ay tinatawag na ________.",
+    "img": "",
+    "answer": "pavement markings",
+    "choices/c1": "mga traffic signals",
+    "choices/c2": "pavement markings",
+    "choices/c3": "traffic hazards"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Aksidente kang nakabangga ng taong naglalakad. Ano ang unang dapat mong gawin?",
+    "img": "",
+    "answer": "Tulungan ang taong naglalakad",
+    "choices/c1": "Tulungan ang taong naglalakad",
+    "choices/c2": "Maghanap ng ligtas na lugar para pumarada",
+    "choices/c3": "Tumawag ng pulis"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Sa anong pagkakataon hindi maaaring mag-overtake?",
+    "img": "",
+    "answer": "Sa blind curve",
+    "choices/c1": "Tuwing gabi",
+    "choices/c2": "Kung umuulan",
+    "choices/c3": "Sa blind curve"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kapag naka-enkuentro ka sa daan ng mga sasakyang pang-emergency kagaya ng ambulansya, fire truck na sumisirena, ano ang dapat mong gawin?",
+    "img": "",
+    "answer": "Magbigay daan sa pamamagitan ng paggilid sa kanan o kaliwa",
+    "choices/c1": "Huwag mo silang pansinin",
+    "choices/c2": "Magbigay daan sa pamamagitan ng paggilid sa kanan o kaliwa",
+    "choices/c3": "Harangan ang kanilang daanan"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kapag ginagamit ang pangunahing batas sa bilis bilang gabay, ang pagpili ng bilis ay nakadepende sa:",
+    "img": "",
+    "answer": "lahat ng nabanggit",
+    "choices/c1": "bilis ng sasakyan na minamaneho",
+    "choices/c2": "kasanayan ng drayber",
+    "choices/c3": "lahat ng nabanggit"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Hindi ka maaaring bumusina maliban na lamang kung:",
+    "img": "",
+    "answer": "may mga umaandar na sasakyan na maaaring magdulot sa iyo ng kapahamakan",
+    "choices/c1": "may mga umaandar na sasakyan na maaaring magdulot sa iyo ng kapahamakan",
+    "choices/c2": "kailangan mong agawin ang pansin ng traffic enforcer",
+    "choices/c3": "magbigay ng senyales na ikaw ay paparating"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ayon sa R.A. 10666, ang bata ay maaaring sumakay sa motorsiklo kung siya ay nakasuot ng standard protective helmet, komportableng naabot ng mga paa ang standard foot peg at ____________________________________.",
+    "img": "",
+    "answer": "nakakayakap ng 360 degrees sa baywang ng drayber",
+    "choices/c1": "nakakakapit ang bata sa rider`s seat handle",
+    "choices/c2": "nakakahawak sa balikat ng drayber",
+    "choices/c3": "nakakayakap ng 360 degrees sa baywang ng drayber"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "sa mga rotonda, alin sa mga sumusunod na mga sasakyan ang mayroong Right-Of-Way?",
+    "img": "",
+    "answer": "Mga sasakyan na nasa rotonda",
+    "choices/c1": "Ang sasakyan na nakaharap sa berdeng ilaw",
+    "choices/c2": "Mga sasakyan na papasok palang",
+    "choices/c3": "Mga sasakyan na nasa rotonda"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "May biglang tumawid sa kalsada nang aandar ka na. Ano ang gagawin mo?",
+    "img": "",
+    "answer": "Maghintay hanggang sa makatawid ang tao",
+    "choices/c1": "Bumusina ng isang beses at hayaang tumawid ang tao",
+    "choices/c2": "Maghintay hanggang sa makatawid ang tao",
+    "choices/c3": "Paatrasin ang taong tumatawid"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Pinahihintulutan pumarada ang isang sasakyan kung:",
+    "img": "",
+    "answer": "lampas 4 na metro sa boka-insendiyo o fire hydrant",
+    "choices/c1": "lampas 4 na metro sa boka-insendiyo o fire hydrant",
+    "choices/c2": "sa loob ng 3 metro ng interseksiyon ng mga linyang kurbada",
+    "choices/c3": "sa loob ng interseksiyon"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang dobleng putol-putol na puting linya sa kalsada ay nangangahulugang:",
+    "img": "",
+    "answer": "pinapahintulutan ang pag-overtake sa kaliwa o kanan na bahagi ng kalsada kung walang panganib",
+    "choices/c1": "ipinagbabawal ang pag-overtake sa kaliwang bahagi ng kalsada",
+    "choices/c2": "ipinagbabawal ang pag-overtake sa kanang bahagi ng kalsada",
+    "choices/c3": "pinapahintulutan ang pag-overtake sa kaliwa o kanan na bahagi ng kalsada kung walang panganib"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang kulay ng traffic light na nagsasabing GO o maaari ka nang umandar?",
+    "img": "",
+    "answer": "Berde",
+    "choices/c1": "Asul",
+    "choices/c2": "Berde",
+    "choices/c3": "Dilaw"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Sakay ng manual clutch backbone na motorsiklo, may asong biglang tumawid sa inyong daan. Aling paa ang dapat mong gamitin upang matamo ang maksimum na preno upang hindi masagasaan ang aso?",
+    "img": "",
+    "answer": "Kanan",
+    "choices/c1": "Kaliwa",
+    "choices/c2": "Kanan",
+    "choices/c3": "Pareho"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang paggamit ng mobile phone habang nagmamaneho ay delikado at ___________.",
+    "img": "",
+    "answer": "ito ay labag sa batas maliban na lamang kung ginagamitan ng hands-free device",
+    "choices/c1": "ito ay labag sa batas at lahat ng saklaw sa batas",
+    "choices/c2": "ito ay labag sa batas maliban na lamang kung ginagamitan ng hands-free device",
+    "choices/c3": "maaari kung nakahinto ang sasakyan dahil sa traffic light sa interseksiyon"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang panglikong signal na ilaw ay dapat gamitin kapag:",
+    "img": "",
+    "answer": "ipaparating ang iyong intensyon sa mga drayber na nasa paligid mo",
+    "choices/c1": "nagmamaneho ng maayos",
+    "choices/c2": "ipaparating ang iyong intensyon sa mga drayber na nasa paligid mo",
+    "choices/c3": "dapat kang bigyan ng daan"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang traffic signs na nagbibigay ng impormasyon tungkol sa mga batas at regulasyong pantrapiko na kung hindi papansinin ay ituturing na paglabag ay tinatawag na:",
+    "img": "",
+    "answer": "regulatory signs",
+    "choices/c1": "regulatory signs",
+    "choices/c2": "warning signs",
+    "choices/c3": "informative signs"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kailan mo dapat suriin ang lebel ng langis ng iyong makina?",
+    "img": "",
+    "answer": "Bago ang mahabang lakbayin",
+    "choices/c1": "Kada 600 km",
+    "choices/c2": "Bago ang mahabang lakbayin",
+    "choices/c3": "Umagang umaga"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Alin sa mga traffic light ang nagsasabi sa iyong maghanda sa paghinto?",
+    "img": "",
+    "answer": "Dilaw",
+    "choices/c1": "Dilaw",
+    "choices/c2": "Berde",
+    "choices/c3": "Pula"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kapag papalapit sa isang crosswalk o linya ng taong naglalakad, dapat kang",
+    "img": "",
+    "answer": "huminto at maghintay sa taong naglalakad",
+    "choices/c1": "bumusina nang huminto sa pagtawid ang taong naglalakad",
+    "choices/c2": "huminto at maghintay sa taong naglalakad",
+    "choices/c3": "bilisan nag iyong bilis"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kung kailangan mong magsuot ng salamin sa mata upang makakita ng malinaw, kailan mo dapat ito isuot kung ikaw ay magmamaneho?",
+    "img": "",
+    "answer": "Sa lahat ng oras",
+    "choices/c1": "Sa hindi magandang panahon",
+    "choices/c2": "Sa gabi",
+    "choices/c3": "Sa lahat ng oras"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang pinakamabuting gawin kung ikaw ay inaantok habang nagmamaneho?",
+    "img": "",
+    "answer": "Huminto sa tamang pahingahan at magpahinga",
+    "choices/c1": "Buksan ang radyo nang napakalakas",
+    "choices/c2": "Magmaneho ng higit na mabilis",
+    "choices/c3": "Huminto sa tamang pahingahan at magpahinga"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang dapat na haba ng saddle box o bag?",
+    "img": "",
+    "answer": "Ang haba ay HINDI dapat lalampas sa dulong bahagi ng likuran",
+    "choices/c1": "Ang haba ay HINDI dapat lalampas sa dulong bahagi ng likuran ng 6 na pulgada",
+    "choices/c2": "Ang haba ay HINDI dapat lalampas sa dulong bahagi ng likuran",
+    "choices/c3": "Ang haba ay HINDI dapat lalampas sa upuan ng motorsiklo"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Sa alin mga sitwatsyong maaring gamitin ang telepono habang nagmamaneho ng sasakyan?",
+    "img": "",
+    "answer": "Wala sa pagpipilian",
+    "choices/c1": "Kung ito ay isang mahalagang tawag",
+    "choices/c2": "Kung magaan ang trapiko",
+    "choices/c3": "Wala sa pagpipilian"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ang sasakyan sa harapan mo ay nagdidilaw na ilaw. Ang ibig sabihin nito ay:",
+    "img": "",
+    "answer": "mabagal na paggalaw",
+    "choices/c1": "sira ito",
+    "choices/c2": "mabagal na paggalaw",
+    "choices/c3": "kotse ng doktor"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Maaari kang mag-overtake sa highway kung ito ay may dalawang lane na may:",
+    "img": "",
+    "answer": "putol-putol na puting linya",
+    "choices/c1": "putol-putol na puting linya",
+    "choices/c2": "tuloy-tuloy na puting linya",
+    "choices/c3": "tuloy-tuloy na dilaw na linya"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Kung kakaliwa, saan dapat nakaposisyon ang iyong motorsiklo?",
+    "img": "",
+    "answer": "Sa pinakamalapit sa gitna ng highway",
+    "choices/c1": "Sa pinakamalapit na kurbada ng highway",
+    "choices/c2": "Sa pinakamalapit sa gitna ng highway",
+    "choices/c3": "Sa pinakamalapit na gilid na linya ng highway"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang dapat mong gawin sa kumikislap na dilaw na trapikong ilaw?",
+    "img": "",
+    "answer": "Magmaneho ng maingat, para itong `Give Way` sign",
+    "choices/c1": "Ang signal na ito ay nagsasabi na hindi ka makakaliko sa sangandaan kaya dumiretso ka lang",
+    "choices/c2": "Magmaneho ng maingat, para itong `Give Way` sign",
+    "choices/c3": "Huminto, magbigay daan at magpatuloy kapag ligtas"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Sakaling may nakabanggaan sa kalsada na kinakasangkutan ng isang tao, ano ang una mong dapat gawin?",
+    "img": "",
+    "answer": "Huminto, suriin ang sitwasyon at bigyan ng nararapat na tulong ang taong nabangga",
+    "choices/c1": "Huminto, suriin ang sitwasyon at bigyan ng nararapat na tulong ang taong nabangga",
+    "choices/c2": "Humanap ng ligtas na lugar na paparadahan ng iyong sasakyan",
+    "choices/c3": "Tumawag ng pulis o kamag-anak para sa iyong seguridad at kaligtasan"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ilang stop lamp o ilaw ang kinakailangan sa mga motorsiklo",
+    "img": "",
+    "answer": "Isa",
+    "choices/c1": "Isa",
+    "choices/c2": "Dalawa",
+    "choices/c3": "Tatlo"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Paano mo dapat iposisyon ang iyong paa habang nagmamaneho ng motorsiklo?",
+    "img": "",
+    "answer": "Nakapirmi at komportable sa apakan ng paa",
+    "choices/c1": "Nakapirmi at komportable sa apakan ng paa",
+    "choices/c2": "Bahagyang nakapatong sa apakan ng paa",
+    "choices/c3": "Marahang nakaapak sa preno at kambyo"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Pinapayagan ba sa motorsiklo ang tail light na kumukurap-kurap",
+    "img": "",
+    "answer": "Hindi",
+    "choices/c1": "Oo",
+    "choices/c2": "Hindi",
+    "choices/c3": "Sa gabi lamang"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang dapat na kulay ng head lamp o head light ng motorsiklo",
+    "img": "",
+    "answer": "Dilaw o Puti na medyo dilaw",
+    "choices/c1": "Pula o Dilaw",
+    "choices/c2": "Dilaw o asul",
+    "choices/c3": "Dilaw o Puti na medyo dilaw"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Para sa mga motorsiklo, kapag paparating sa palusong, ang drayber ay dapat na",
+    "img": "",
+    "answer": "lumipat sa mas mababang gear",
+    "choices/c1": "lumipat sa neutral",
+    "choices/c2": "lumipat sa mas mataas na gear",
+    "choices/c3": "lumipat sa mas mababang gear"
+  },
+  {
+    "language": "tagalog",
+    "category": "np_motorcycle",
+    "question": "Ano ang dapat na lapad ng mga bag ng saddle para sa mga motorsiklo?",
+    "img": "",
+    "answer": "hindi dapat lumagpas sa labing apat (14) pulgada mula sa mga gilid ng motorsiklo",
+    "choices/c1": "hindi dapat lumampas sa sampung (10) pulgada mula sa mga gilid ng motorsiklo",
+    "choices/c2": "hindi dapat lumampas sa labing dalawa (12) pulgada mula sa mga gilid ng motorsiklo",
+    "choices/c3": "hindi dapat lumagpas sa labing apat (14) pulgada mula sa mga gilid ng motorsiklo"
+  }
+]
