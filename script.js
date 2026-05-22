@@ -4,18 +4,23 @@ const DB_NAME = "ltoMotorcycleReviewer";
 const DB_VERSION = 1;
 const DB_STORE = "questionBanks";
 const DB_KEY = "np_motorcycle_questions";
-const QUESTION_URL = "questions.json";
+const DEFAULT_QUESTION_BANK_URL = "data/questions.json";
+const QUESTION_BANK_OPTIONS = [
+  { label: "questions.json", url: "data/questions.json" },
+  { label: "questions-v1.json", url: "data/questions-v1.json" }
+];
 
 const STORAGE_KEYS = {
   theme: "ltoMotorcycleTheme",
   settings: "ltoMotorcycleSettings",
   exam: "ltoMotorcycleExamState",
-  questionBackup: "ltoMotorcycleQuestionBackup"
+  questionBackup: "ltoMotorcycleQuestionBackup",
+  questionMeta: "ltoMotorcycleQuestionMeta"
 };
 
 const app = document.getElementById("app");
 const statusPanel = document.getElementById("statusPanel");
-const themeToggle = document.getElementById("themeToggle");
+const themeChoiceButtons = Array.from(document.querySelectorAll("[data-theme-choice]"));
 
 let questionBank = [];
 let bankMeta = {
@@ -30,7 +35,11 @@ if (document.readyState === "loading") {
 } else {
   initApp();
 }
-themeToggle.addEventListener("click", toggleTheme);
+themeChoiceButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    applyTheme(button.dataset.themeChoice);
+  });
+});
 
 async function initApp() {
   setupThemeButton();
@@ -66,49 +75,81 @@ async function initApp() {
 }
 
 function setupThemeButton() {
-  const isDark = document.documentElement.classList.contains("dark");
-  themeToggle.textContent = isDark ? "Light" : "Dark";
-  themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+  const activeTheme = getActiveTheme();
+  themeChoiceButtons.forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.themeChoice === activeTheme));
+  });
 }
 
-function toggleTheme() {
-  const willUseDark = !document.documentElement.classList.contains("dark");
-  document.documentElement.classList.toggle("dark", willUseDark);
-  localStorage.setItem(STORAGE_KEYS.theme, willUseDark ? "dark" : "light");
+function getActiveTheme() {
+  return document.documentElement.classList.contains("dark") ? "dark" : "light";
+}
+
+function applyTheme(theme) {
+  const nextTheme = theme === "dark" ? "dark" : "light";
+  document.documentElement.classList.toggle("dark", nextTheme === "dark");
+  document.documentElement.dataset.theme = nextTheme;
+  try {
+    localStorage.setItem(STORAGE_KEYS.theme, nextTheme);
+  } catch (error) {
+    console.warn("Theme save failed:", error);
+  }
   setupThemeButton();
 }
 
 async function loadQuestionBank() {
   // Prefer IndexedDB so a returning user can load the reviewer without refetching questions.json.
-  const indexedDbQuestions = await readQuestionsFromIndexedDB();
+  const indexedDbRecord = await readQuestionRecordFromIndexedDB();
+  const indexedDbQuestions = getQuestionsFromStoredRecord(indexedDbRecord);
   if (indexedDbQuestions && indexedDbQuestions.length) {
     return {
       questions: normalizeQuestionBank(indexedDbQuestions),
       meta: {
-        source: "IndexedDB",
-        savedAt: "",
+        source: indexedDbRecord.source || "IndexedDB",
+        url: normalizeQuestionBankUrl(indexedDbRecord.url || indexedDbRecord.source),
+        savedAt: indexedDbRecord.savedAt || "",
         rawCount: indexedDbQuestions.length
       }
     };
   }
 
-  try {
-    // First successful load: fetch the local JSON file, then keep a durable browser copy.
-    const response = await fetch(QUESTION_URL);
-    if (!response.ok) {
-      throw new Error("questions.json returned " + response.status);
-    }
+  const backupMeta = readQuestionMeta();
+  const preferredBackupQuestions = backupMeta && backupMeta.preferBackup ? readQuestionBackup() : null;
+  if (preferredBackupQuestions && preferredBackupQuestions.length) {
+    return {
+      questions: normalizeQuestionBank(preferredBackupQuestions),
+      meta: {
+        source: backupMeta.source || "selected JSON backup",
+        url: normalizeQuestionBankUrl(backupMeta.url || backupMeta.source),
+        savedAt: backupMeta.savedAt || "",
+        rawCount: preferredBackupQuestions.length
+      }
+    };
+  }
 
-    const rawQuestions = await response.json();
-    const rawList = extractQuestionList(rawQuestions);
-    await saveQuestionsToIndexedDB(rawList);
-    saveQuestionBackup(rawList);
+  try {
+    // First successful load: fetch the default local JSON file, then keep a durable browser copy.
+    const defaultOption = getQuestionBankOption(DEFAULT_QUESTION_BANK_URL);
+    const rawList = await fetchQuestionBank(defaultOption.url);
+    const savedAt = new Date().toISOString();
+    await saveQuestionsToIndexedDB(rawList, {
+      source: defaultOption.label,
+      url: defaultOption.url,
+      savedAt
+    });
+    saveQuestionBackup(rawList, {
+      source: defaultOption.label,
+      url: defaultOption.url,
+      savedAt,
+      preferBackup: false
+    });
 
     return {
       questions: normalizeQuestionBank(rawList),
       meta: {
-        source: "questions.json",
-        savedAt: new Date().toISOString(),
+        source: defaultOption.label,
+        url: defaultOption.url,
+        savedAt,
         rawCount: rawList.length
       }
     };
@@ -118,15 +159,25 @@ async function loadQuestionBank() {
       return {
         questions: normalizeQuestionBank(backupQuestions),
         meta: {
-          source: "localStorage backup",
-          savedAt: "",
+          source: backupMeta && backupMeta.source ? backupMeta.source : "localStorage backup",
+          url: backupMeta && backupMeta.url ? normalizeQuestionBankUrl(backupMeta.url) : "",
+          savedAt: backupMeta && backupMeta.savedAt ? backupMeta.savedAt : "",
           rawCount: backupQuestions.length
         }
       };
     }
 
-    throw new Error("Could not load questions.json. If you opened the file directly, use a local static server so fetch can read the JSON file.");
+    throw new Error("Could not load data/questions.json. If you opened the file directly, use a local static server so fetch can read the JSON file.");
   }
+}
+
+async function fetchQuestionBank(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(url + " returned " + response.status);
+  }
+
+  return extractQuestionList(await response.json());
 }
 
 function openDatabase() {
@@ -150,14 +201,30 @@ function openDatabase() {
   });
 }
 
-async function readQuestionsFromIndexedDB() {
+function getQuestionsFromStoredRecord(record) {
+  if (!record) {
+    return null;
+  }
+
+  if (Array.isArray(record)) {
+    return record;
+  }
+
+  if (record.questions) {
+    return extractQuestionList(record.questions);
+  }
+
+  return null;
+}
+
+async function readQuestionRecordFromIndexedDB() {
   try {
     const db = await openDatabase();
     return await new Promise((resolve, reject) => {
       const tx = db.transaction(DB_STORE, "readonly");
       const store = tx.objectStore(DB_STORE);
       const request = store.get(DB_KEY);
-      request.onsuccess = () => resolve(request.result ? request.result.questions : null);
+      request.onsuccess = () => resolve(request.result || null);
       request.onerror = () => reject(request.error);
       tx.oncomplete = () => db.close();
     });
@@ -167,16 +234,19 @@ async function readQuestionsFromIndexedDB() {
   }
 }
 
-async function saveQuestionsToIndexedDB(rawQuestions) {
+async function saveQuestionsToIndexedDB(rawQuestions, meta = {}) {
   try {
     const db = await openDatabase();
+    const savedAt = meta.savedAt || new Date().toISOString();
     await new Promise((resolve, reject) => {
       const tx = db.transaction(DB_STORE, "readwrite");
       const store = tx.objectStore(DB_STORE);
       store.put({
         id: DB_KEY,
         questions: rawQuestions,
-        savedAt: new Date().toISOString()
+        source: meta.source || getQuestionBankOption(DEFAULT_QUESTION_BANK_URL).label,
+        url: normalizeQuestionBankUrl(meta.url || meta.source) || DEFAULT_QUESTION_BANK_URL,
+        savedAt
       });
       tx.oncomplete = () => {
         db.close();
@@ -189,9 +259,25 @@ async function saveQuestionsToIndexedDB(rawQuestions) {
   }
 }
 
-function saveQuestionBackup(rawQuestions) {
+async function deleteQuestionDatabase() {
+  if (!("indexedDB" in window)) {
+    return;
+  }
+
+  await new Promise((resolve, reject) => {
+    const request = indexedDB.deleteDatabase(DB_NAME);
+    request.onsuccess = () => resolve();
+    request.onerror = () => reject(request.error || new Error("IndexedDB delete failed."));
+    request.onblocked = () => reject(new Error("Could not replace the question bank because another tab is using the current IndexedDB database. Close other reviewer tabs and try again."));
+  });
+}
+
+function saveQuestionBackup(rawQuestions, meta = null) {
   try {
     localStorage.setItem(STORAGE_KEYS.questionBackup, JSON.stringify(rawQuestions));
+    if (meta) {
+      localStorage.setItem(STORAGE_KEYS.questionMeta, JSON.stringify(meta));
+    }
   } catch (error) {
     console.warn("Question backup save failed:", error);
   }
@@ -207,6 +293,16 @@ function readQuestionBackup() {
   }
 }
 
+function readQuestionMeta() {
+  try {
+    const stored = localStorage.getItem(STORAGE_KEYS.questionMeta);
+    return stored ? JSON.parse(stored) : null;
+  } catch (error) {
+    console.warn("Question metadata read failed:", error);
+    return null;
+  }
+}
+
 function extractQuestionList(rawData) {
   if (Array.isArray(rawData)) {
     return rawData;
@@ -217,6 +313,86 @@ function extractQuestionList(rawData) {
   }
 
   throw new Error("questions.json must be an array or an object with a questions array.");
+}
+
+function getQuestionBankOption(url) {
+  const normalizedUrl = normalizeQuestionBankUrl(url) || DEFAULT_QUESTION_BANK_URL;
+  return QUESTION_BANK_OPTIONS.find((option) => option.url === normalizedUrl) || QUESTION_BANK_OPTIONS[0];
+}
+
+function normalizeQuestionBankUrl(value) {
+  const cleanValue = cleanText(value);
+  if (!cleanValue) {
+    return "";
+  }
+
+  const normalizedValue = cleanValue.replace(/\\/g, "/").replace(/^\.\//, "");
+  const matchedOption = QUESTION_BANK_OPTIONS.find((option) => {
+    return normalizedValue === option.url ||
+      normalizedValue === option.label ||
+      normalizedValue === "data/" + option.label ||
+      normalizedValue.endsWith("/" + option.label);
+  });
+
+  return matchedOption ? matchedOption.url : "";
+}
+
+function getCurrentQuestionBankUrl() {
+  return normalizeQuestionBankUrl(bankMeta.url || bankMeta.source) || DEFAULT_QUESTION_BANK_URL;
+}
+
+function renderQuestionBankOptions(selectedUrl) {
+  return QUESTION_BANK_OPTIONS.map((option) => {
+    const selected = option.url === selectedUrl ? " selected" : "";
+    return `<option value="${escapeAttribute(option.url)}"${selected}>${escapeHtml(option.label)}</option>`;
+  }).join("");
+}
+
+async function handleQuestionBankSelectChange(event) {
+  const select = event.target;
+  const nextUrl = normalizeQuestionBankUrl(select.value);
+  const previousUrl = getCurrentQuestionBankUrl();
+  if (!nextUrl || nextUrl === previousUrl) {
+    return;
+  }
+
+  const option = getQuestionBankOption(nextUrl);
+  showStatus("Loading " + option.label + "...", "info");
+
+  try {
+    await replaceQuestionBankFromUrl(option.url);
+  } catch (error) {
+    console.error(error);
+    select.value = previousUrl;
+    showStatus(error.message || "Could not load that JSON file.", "error");
+  }
+}
+
+async function replaceQuestionBankFromUrl(url) {
+  const option = getQuestionBankOption(url);
+  const rawList = await fetchQuestionBank(option.url);
+  const normalizedQuestions = normalizeQuestionBank(rawList);
+  if (!normalizedQuestions.length) {
+    throw new Error(option.label + " does not contain any usable questions.");
+  }
+
+  const savedAt = new Date().toISOString();
+  await deleteQuestionDatabase();
+  clearExamState();
+  await saveQuestionsToIndexedDB(rawList, {
+    source: option.label,
+    url: option.url,
+    savedAt
+  });
+  saveQuestionBackup(rawList, {
+    source: option.label,
+    url: option.url,
+    savedAt,
+    preferBackup: true
+  });
+
+  showStatus("Loaded " + normalizedQuestions.length + " usable questions from " + option.label + ". Refreshing...", "info");
+  window.setTimeout(() => window.location.reload(), 350);
 }
 
 function normalizeQuestionBank(rawQuestions) {
@@ -309,6 +485,7 @@ function renderStartScreen() {
   const counts = getLanguageCounts();
   const hasSavedExam = Boolean(examState && examState.selectedQuestions && examState.selectedQuestions.length);
   const availableForSelection = countAvailable(settings.language);
+  const selectedQuestionBankUrl = getCurrentQuestionBankUrl();
 
   app.innerHTML = `
     <div class="grid gap-4">
@@ -334,6 +511,16 @@ function renderStartScreen() {
             <span class="block text-xs uppercase tracking-wide text-slate-500 dark:text-zinc-500">Loaded from</span>
             <strong class="text-slate-950 dark:text-zinc-50">${escapeHtml(bankMeta.source || "Not loaded")}</strong>
           </div>
+        </div>
+
+        <div class="mt-5 rounded-lg border border-dashed border-slate-300 bg-slate-50 p-4 dark:border-zinc-700 dark:bg-zinc-950">
+          <label class="grid gap-2">
+            <span class="text-sm font-semibold">Question bank JSON</span>
+            <select id="questionBankSelect" class="min-h-12 rounded-lg border border-slate-300 bg-white px-3 text-base text-slate-950 focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/25 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50">
+              ${renderQuestionBankOptions(selectedQuestionBankUrl)}
+            </select>
+            <span class="text-sm text-slate-600 dark:text-zinc-400">Changing the selection replaces the saved question bank, clears saved exam progress, and refreshes the app.</span>
+          </label>
         </div>
 
         ${hasSavedExam ? renderSavedExamNotice() : ""}
@@ -363,7 +550,7 @@ function renderStartScreen() {
       <section class="rounded-lg border border-slate-200 bg-white p-5 text-sm leading-6 text-slate-600 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300">
         <h3 class="mb-2 text-base font-bold text-slate-950 dark:text-zinc-50">Offline note</h3>
         <p>
-          After a successful first load, the question bank is stored in IndexedDB and your exam progress is stored in browser storage. For local testing, use a simple static server because some browsers block <code class="rounded bg-slate-100 px-1 py-0.5 dark:bg-zinc-800">fetch("questions.json")</code> when opening HTML directly from the file system.
+          After a successful first load, the question bank is stored in IndexedDB and your exam progress is stored in browser storage. For local testing, use a simple static server because some browsers block <code class="rounded bg-slate-100 px-1 py-0.5 dark:bg-zinc-800">fetch("data/questions.json")</code> when opening HTML directly from the file system.
         </p>
       </section>
     </div>
@@ -372,6 +559,9 @@ function renderStartScreen() {
   const languageSelect = document.getElementById("languageSelect");
   const itemCountInput = document.getElementById("itemCountInput");
   const availabilityNote = document.getElementById("availabilityNote");
+  const questionBankSelect = document.getElementById("questionBankSelect");
+
+  questionBankSelect.addEventListener("change", handleQuestionBankSelectChange);
 
   languageSelect.addEventListener("change", () => {
     const language = languageSelect.value;

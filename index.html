@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LTO Motorcycle Reviewer Exam</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    window.tailwind = window.tailwind || {};
-    window.tailwind.config = {
+    tailwind.config = {
       darkMode: "class",
       theme: {
         extend: {
@@ -19,14 +19,20 @@
   </script>
   <script>
     (function () {
-      var savedTheme = localStorage.getItem("ltoMotorcycleTheme");
+      var savedTheme = "";
+      try {
+        savedTheme = localStorage.getItem("ltoMotorcycleTheme");
+      } catch (error) {
+        savedTheme = "";
+      }
       var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-      if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+      var useDark = savedTheme === "dark" || (!savedTheme && prefersDark);
+      document.documentElement.dataset.theme = useDark ? "dark" : "light";
+      if (useDark) {
         document.documentElement.classList.add("dark");
       }
     })();
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="min-h-full bg-slate-50 text-slate-950 antialiased transition-colors dark:bg-zinc-950 dark:text-zinc-50">
@@ -37,9 +43,10 @@
           <p class="text-xs font-semibold uppercase tracking-[0.18em] text-teal-700 dark:text-teal-300">LTO Reviewer</p>
           <h1 class="text-base font-bold sm:text-lg">Non-Professional Motorcycle Exam</h1>
         </div>
-        <button id="themeToggle" type="button" class="min-h-11 rounded-lg border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-800 transition hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-900">
-          Dark
-        </button>
+        <div id="themeToggle" class="theme-toggle" role="group" aria-label="Color theme">
+          <button type="button" class="theme-choice" data-theme-choice="light" aria-pressed="false">Light</button>
+          <button type="button" class="theme-choice" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        </div>
       </div>
     </header>
 
