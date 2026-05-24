@@ -7,7 +7,8 @@ const DB_KEY = "np_motorcycle_questions";
 const DEFAULT_QUESTION_BANK_URL = "data/questions.json";
 const QUESTION_BANK_OPTIONS = [
   { label: "questions.json", url: "data/questions.json" },
-  { label: "questions-v1.json", url: "data/questions-v1.json" }
+  { label: "questions-v1.json", url: "data/questions-v1.json" },
+  { label: "drivesafe.ph.json", url: "data/drivesafe.ph.json" }
 ];
 
 const STORAGE_KEYS = {
@@ -29,6 +30,7 @@ let bankMeta = {
   rawCount: 0
 };
 let examState = null;
+let examTimerId = null;
 
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initApp);
@@ -481,6 +483,8 @@ function cleanText(value) {
 }
 
 function renderStartScreen() {
+  stopExamTimer();
+
   const settings = loadSettings();
   const counts = getLanguageCounts();
   const hasSavedExam = Boolean(examState && examState.selectedQuestions && examState.selectedQuestions.length);
@@ -640,8 +644,10 @@ function startExam(language, requestedCount) {
   }
 
   const actualCount = selected.length;
+  const startedAtMs = Date.now();
+  const startedAt = new Date(startedAtMs);
   examState = {
-    id: Date.now().toString(),
+    id: startedAtMs.toString(),
     settings: {
       language,
       requestedCount,
@@ -650,8 +656,12 @@ function startExam(language, requestedCount) {
     selectedQuestions: selected,
     currentIndex: 0,
     answers: Array(actualCount).fill(null),
+    startedAt: startedAt.toISOString(),
+    startedAtMs,
     finished: false,
     submittedAt: null,
+    submittedAtMs: null,
+    durationSeconds: null,
     score: null
   };
 
@@ -685,6 +695,7 @@ function renderExam() {
   const selectedAnswer = examState.answers[currentIndex];
   const answeredCount = examState.answers.filter(Boolean).length;
   const progressPercent = Math.round(((currentIndex + 1) / total) * 100);
+  const elapsedTime = formatDuration(getExamElapsedSeconds(examState));
 
   app.innerHTML = `
     <section class="rounded-lg border border-slate-200 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
@@ -692,7 +703,7 @@ function renderExam() {
         <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
           <div>
             <p class="text-sm font-semibold text-teal-700 dark:text-teal-300">Question ${currentIndex + 1} of ${total}</p>
-            <p class="text-xs text-slate-500 dark:text-zinc-400">${answeredCount} answered</p>
+            <p class="text-xs text-slate-500 dark:text-zinc-400">${answeredCount} answered - Time: <span id="examElapsedTime">${elapsedTime}</span></p>
           </div>
           <button id="newExamButton" type="button" class="min-h-10 rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-800 transition hover:bg-slate-100 dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-800">
             New Exam
@@ -710,7 +721,7 @@ function renderExam() {
         </div>
 
         <h2 class="text-xl font-bold leading-snug sm:text-2xl">${escapeHtml(currentQuestion.question)}</h2>
-        ${currentQuestion.image ? `<img src="${escapeAttribute(currentQuestion.image)}" alt="" class="mt-4 max-h-64 w-full rounded-lg border border-slate-200 object-contain dark:border-zinc-800">` : ""}
+        ${currentQuestion.image ? `<img src="${escapeAttribute(currentQuestion.image)}" alt="" class="mx-auto mt-4 block h-auto max-h-64 max-w-full rounded-lg border border-slate-200 object-contain dark:border-zinc-800">` : ""}
 
         <div class="mt-6 grid gap-3" role="radiogroup" aria-label="Answer choices">
           ${currentQuestion.choices.map((choice, choiceIndex) => renderChoiceButton(choice, choiceIndex, selectedAnswer)).join("")}
@@ -730,6 +741,8 @@ function renderExam() {
       </div>
     </section>
   `;
+
+  startExamTimer();
 
   document.querySelectorAll("[data-choice]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -765,6 +778,7 @@ function renderChoiceButton(choice, choiceIndex, selectedAnswer) {
 function chooseAnswer(answer) {
   examState.answers[examState.currentIndex] = answer;
   saveExamState();
+  hideStatus();
   renderExam();
 }
 
@@ -775,6 +789,12 @@ function goToPreviousQuestion() {
 }
 
 function goToNextQuestion() {
+  if (!examState.answers[examState.currentIndex]) {
+    showStatus("Select an answer before going to the next question.", "error");
+    return;
+  }
+
+  hideStatus();
   examState.currentIndex = Math.min(examState.selectedQuestions.length - 1, examState.currentIndex + 1);
   saveExamState();
   renderExam();
@@ -790,8 +810,13 @@ function submitExam() {
   }
 
   const score = calculateScore(examState);
+  const submittedAtMs = Date.now();
+  const submittedAt = new Date(submittedAtMs);
+  const durationSeconds = getExamElapsedSeconds(examState, submittedAtMs, { roundUp: true });
   examState.finished = true;
-  examState.submittedAt = new Date().toISOString();
+  examState.submittedAt = submittedAt.toISOString();
+  examState.submittedAtMs = submittedAtMs;
+  examState.durationSeconds = durationSeconds;
   examState.score = score;
   saveExamState();
   hideStatus();
@@ -819,13 +844,123 @@ function calculateScore(state) {
   };
 }
 
+function startExamTimer() {
+  stopExamTimer();
+  updateExamTimerDisplay();
+  examTimerId = window.setInterval(updateExamTimerDisplay, 1000);
+}
+
+function stopExamTimer() {
+  if (!examTimerId) {
+    return;
+  }
+
+  window.clearInterval(examTimerId);
+  examTimerId = null;
+}
+
+function updateExamTimerDisplay() {
+  const timer = document.getElementById("examElapsedTime");
+  if (!timer || !examState || examState.finished) {
+    return;
+  }
+
+  timer.textContent = formatDuration(getExamElapsedSeconds(examState));
+}
+
+function getExamElapsedSeconds(state, endDate = Date.now(), options = {}) {
+  if (!state) {
+    return 0;
+  }
+
+  const startedAtMs = getExamStartMs(state);
+  const endMs = getExamEndMs(state, endDate);
+  const savedDuration = state.durationSeconds == null ? NaN : Number(state.durationSeconds);
+
+  if (Number.isFinite(startedAtMs) && Number.isFinite(endMs)) {
+    const elapsedMs = Math.max(0, endMs - startedAtMs);
+    const seconds = options.roundUp ? Math.ceil(elapsedMs / 1000) : Math.floor(elapsedMs / 1000);
+    if (state.finished && Number.isFinite(savedDuration) && savedDuration >= 0) {
+      return Math.max(seconds, Math.floor(savedDuration));
+    }
+    return Math.max(0, seconds);
+  }
+
+  if (state.finished && Number.isFinite(savedDuration) && savedDuration >= 0) {
+    return Math.floor(savedDuration);
+  }
+
+  return 0;
+}
+
+function getExamStartMs(state) {
+  const numericStartedAtMs = Number(state.startedAtMs);
+  if (Number.isFinite(numericStartedAtMs) && numericStartedAtMs > 0) {
+    return numericStartedAtMs;
+  }
+
+  const startedAtMs = Date.parse(state.startedAt);
+  if (Number.isFinite(startedAtMs)) {
+    return startedAtMs;
+  }
+
+  const idMs = Number(state.id);
+  if (Number.isFinite(idMs) && idMs > 0) {
+    return idMs;
+  }
+
+  return Date.now();
+}
+
+function getExamEndMs(state, fallbackEndDate) {
+  if (state.finished) {
+    const numericSubmittedAtMs = Number(state.submittedAtMs);
+    if (Number.isFinite(numericSubmittedAtMs) && numericSubmittedAtMs > 0) {
+      return numericSubmittedAtMs;
+    }
+
+    const submittedAtMs = Date.parse(state.submittedAt);
+    if (Number.isFinite(submittedAtMs)) {
+      return submittedAtMs;
+    }
+  }
+
+  if (fallbackEndDate instanceof Date) {
+    return fallbackEndDate.getTime();
+  }
+
+  const numericFallbackMs = Number(fallbackEndDate);
+  if (Number.isFinite(numericFallbackMs) && numericFallbackMs > 0) {
+    return numericFallbackMs;
+  }
+
+  return Date.parse(fallbackEndDate);
+}
+
+function formatDuration(totalSeconds) {
+  const seconds = Math.max(0, Math.floor(Number(totalSeconds) || 0));
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
+  const remainingSeconds = seconds % 60;
+  const paddedSeconds = String(remainingSeconds).padStart(2, "0");
+
+  if (hours > 0) {
+    return hours + ":" + String(minutes).padStart(2, "0") + ":" + paddedSeconds;
+  }
+
+  return minutes + ":" + paddedSeconds;
+}
+
 function renderResults() {
+  stopExamTimer();
+
   if (!examState || !examState.selectedQuestions.length) {
     renderStartScreen();
     return;
   }
 
   const score = examState.score || calculateScore(examState);
+  const duration = formatDuration(getExamElapsedSeconds(examState));
 
   app.innerHTML = `
     <section class="grid gap-4">
@@ -834,7 +969,7 @@ function renderResults() {
         <h2 class="mt-2 text-3xl font-bold">${score.correct} / ${score.total}</h2>
         <p class="mt-1 text-slate-600 dark:text-zinc-300">${score.percentage}% score</p>
 
-        <div class="mt-5 grid gap-3 sm:grid-cols-3">
+        <div class="mt-5 grid gap-3 sm:grid-cols-4">
           <div class="rounded-lg bg-green-50 p-4 text-green-900 dark:bg-green-950 dark:text-green-100">
             <span class="block text-xs uppercase tracking-wide">Correct</span>
             <strong class="text-2xl">${score.correct}</strong>
@@ -846,6 +981,10 @@ function renderResults() {
           <div class="rounded-lg bg-blue-50 p-4 text-blue-900 dark:bg-blue-950 dark:text-blue-100">
             <span class="block text-xs uppercase tracking-wide">Items</span>
             <strong class="text-2xl">${score.total}</strong>
+          </div>
+          <div class="rounded-lg bg-amber-50 p-4 text-amber-900 dark:bg-amber-950 dark:text-amber-100">
+            <span class="block text-xs uppercase tracking-wide">Duration</span>
+            <strong class="text-2xl">${duration}</strong>
           </div>
         </div>
 
@@ -889,7 +1028,7 @@ function renderReviewQuestion(question, index) {
         </span>
       </div>
       <p class="mb-4 leading-6">${escapeHtml(question.question)}</p>
-      ${question.image ? `<img src="${escapeAttribute(question.image)}" alt="" class="mb-4 max-h-56 w-full rounded-lg border border-slate-200 object-contain dark:border-zinc-800">` : ""}
+      ${question.image ? `<img src="${escapeAttribute(question.image)}" alt="" class="mx-auto mb-4 block h-auto max-h-56 max-w-full rounded-lg border border-slate-200 object-contain dark:border-zinc-800">` : ""}
       <div class="grid gap-2">
         ${question.choices.map((choice) => renderReviewChoice(choice, selected, question.answer)).join("")}
       </div>
