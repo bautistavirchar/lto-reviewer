@@ -8,7 +8,8 @@ const DEFAULT_QUESTION_BANK_URL = "data/questions.json";
 const QUESTION_BANK_OPTIONS = [
   { label: "questions.json", url: "data/questions.json" },
   { label: "questions-v1.json", url: "data/questions-v1.json" },
-  { label: "drivesafe.ph.json", url: "data/drivesafe.ph.json" }
+  { label: "drivesafe.ph.json", url: "data/drivesafe.ph.json" },
+  { label: "portal.lto.gov.ph.json", url: "data/portal.lto.gov.ph/portal.lto.gov.ph.json" }
 ];
 
 const STORAGE_KEYS = {
