@@ -16,6 +16,11 @@ const QUESTIONNAIRE_TYPE_OPTIONS = [
   { label: "Questions with images", value: "with-image" },
   { label: "Text-only questions", value: "text-only" }
 ];
+const REVIEW_FILTER_OPTIONS = [
+  { label: "All answers", value: "all" },
+  { label: "Correct answers", value: "correct" },
+  { label: "Wrong answers", value: "wrong" }
+];
 
 const STORAGE_KEYS = {
   theme: "ltoMotorcycleTheme",
@@ -361,6 +366,13 @@ function renderQuestionBankOptions(selectedUrl) {
 
 function renderQuestionnaireTypeOptions(selectedValue) {
   return QUESTIONNAIRE_TYPE_OPTIONS.map((option) => {
+    const selected = option.value === selectedValue ? " selected" : "";
+    return `<option value="${escapeAttribute(option.value)}"${selected}>${escapeHtml(option.label)}</option>`;
+  }).join("");
+}
+
+function renderReviewFilterOptions(selectedValue) {
+  return REVIEW_FILTER_OPTIONS.map((option) => {
     const selected = option.value === selectedValue ? " selected" : "";
     return `<option value="${escapeAttribute(option.value)}"${selected}>${escapeHtml(option.label)}</option>`;
   }).join("");
@@ -1029,7 +1041,7 @@ function formatDuration(totalSeconds) {
   return minutes + ":" + paddedSeconds;
 }
 
-function renderResults() {
+function renderResults(reviewFilter = "all") {
   stopExamTimer();
 
   if (!examState || !examState.selectedQuestions.length) {
@@ -1039,6 +1051,7 @@ function renderResults() {
 
   const score = examState.score || calculateScore(examState);
   const duration = formatDuration(getExamElapsedSeconds(examState));
+  const selectedReviewFilter = getReviewFilterValue(reviewFilter);
 
   app.innerHTML = `
     <section class="grid gap-4">
@@ -1074,10 +1087,23 @@ function renderResults() {
             Review Answers
           </button>
         </div>
+
+        <div class="mt-5 grid gap-2 border-t border-slate-200 pt-5 dark:border-zinc-800 sm:grid-cols-[minmax(0,1fr)_minmax(12rem,16rem)] sm:items-end">
+          <div>
+            <h3 class="text-base font-bold">Answer review</h3>
+            <p id="reviewFilterSummary" class="mt-1 text-sm text-slate-600 dark:text-zinc-400">${getReviewFilterSummary(selectedReviewFilter)}</p>
+          </div>
+          <label class="grid gap-2">
+            <span class="text-sm font-semibold">Display answers</span>
+            <select id="reviewFilterSelect" class="min-h-12 rounded-lg border border-slate-300 bg-white px-3 text-base text-slate-950 focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/25 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-50">
+              ${renderReviewFilterOptions(selectedReviewFilter)}
+            </select>
+          </label>
+        </div>
       </div>
 
       <div id="reviewList" class="grid gap-4">
-        ${examState.selectedQuestions.map((question, index) => renderReviewQuestion(question, index)).join("")}
+        ${renderReviewList(selectedReviewFilter)}
       </div>
     </section>
   `;
@@ -1091,6 +1117,65 @@ function renderResults() {
   document.getElementById("reviewTopButton").addEventListener("click", () => {
     document.getElementById("reviewList").scrollIntoView({ behavior: "smooth", block: "start" });
   });
+
+  document.getElementById("reviewFilterSelect").addEventListener("change", (event) => {
+    const nextFilter = getReviewFilterValue(event.target.value);
+    document.getElementById("reviewFilterSummary").textContent = getReviewFilterSummary(nextFilter);
+    document.getElementById("reviewList").innerHTML = renderReviewList(nextFilter);
+  });
+}
+
+function getReviewFilterValue(value) {
+  return REVIEW_FILTER_OPTIONS.some((option) => option.value === value) ? value : "all";
+}
+
+function getReviewFilterItems(filter) {
+  const selectedFilter = getReviewFilterValue(filter);
+  return examState.selectedQuestions
+    .map((question, index) => ({
+      question,
+      index,
+      isCorrect: examState.answers[index] === question.answer
+    }))
+    .filter((item) => {
+      if (selectedFilter === "correct") {
+        return item.isCorrect;
+      }
+
+      if (selectedFilter === "wrong") {
+        return !item.isCorrect;
+      }
+
+      return true;
+    });
+}
+
+function getReviewFilterSummary(filter) {
+  const selectedFilter = getReviewFilterValue(filter);
+  const score = examState.score || calculateScore(examState);
+
+  if (selectedFilter === "correct") {
+    return "Showing " + score.correct + " correct " + pluralize("answer", score.correct) + ".";
+  }
+
+  if (selectedFilter === "wrong") {
+    return "Showing " + score.wrong + " wrong " + pluralize("answer", score.wrong) + ".";
+  }
+
+  return "Showing all " + score.total + " reviewed " + pluralize("answer", score.total) + ".";
+}
+
+function renderReviewList(filter) {
+  const items = getReviewFilterItems(filter);
+  if (!items.length) {
+    return `
+      <p class="rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-700 shadow-sm dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300">
+        No answers match this display option.
+      </p>
+    `;
+  }
+
+  return items.map((item) => renderReviewQuestion(item.question, item.index)).join("");
 }
 
 function renderReviewQuestion(question, index) {
@@ -1262,6 +1347,10 @@ function formatCategory(category) {
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
+}
+
+function pluralize(word, count) {
+  return Number(count) === 1 ? word : word + "s";
 }
 
 function escapeHtml(value) {
