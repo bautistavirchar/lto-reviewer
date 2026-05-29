@@ -352,6 +352,7 @@ function renderQuestionBankOptions(selectedUrl) {
 }
 
 async function handleQuestionBankSelectChange(event) {
+  event.preventDefault();
   const select = event.target;
   const nextUrl = normalizeQuestionBankUrl(select.value);
   const previousUrl = getCurrentQuestionBankUrl();
@@ -360,6 +361,7 @@ async function handleQuestionBankSelectChange(event) {
   }
 
   const option = getQuestionBankOption(nextUrl);
+  select.disabled = true;
   showStatus("Loading " + option.label + "...", "info");
 
   try {
@@ -368,6 +370,10 @@ async function handleQuestionBankSelectChange(event) {
     console.error(error);
     select.value = previousUrl;
     showStatus(error.message || "Could not load that JSON file.", "error");
+  } finally {
+    if (select.isConnected) {
+      select.disabled = false;
+    }
   }
 }
 
@@ -394,8 +400,16 @@ async function replaceQuestionBankFromUrl(url) {
     preferBackup: true
   });
 
-  showStatus("Loaded " + normalizedQuestions.length + " usable questions from " + option.label + ". Refreshing...", "info");
-  window.setTimeout(() => window.location.reload(), 350);
+  questionBank = normalizedQuestions;
+  bankMeta = {
+    source: option.label,
+    url: option.url,
+    savedAt,
+    rawCount: rawList.length
+  };
+  examState = null;
+  renderStartScreen();
+  showStatus("Loaded " + normalizedQuestions.length + " usable questions from " + option.label + ".", "info");
 }
 
 function normalizeQuestionBank(rawQuestions) {
@@ -524,7 +538,7 @@ function renderStartScreen() {
             <select id="questionBankSelect" class="min-h-12 rounded-lg border border-slate-300 bg-white px-3 text-base text-slate-950 focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/25 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50">
               ${renderQuestionBankOptions(selectedQuestionBankUrl)}
             </select>
-            <span class="text-sm text-slate-600 dark:text-zinc-400">Changing the selection replaces the saved question bank, clears saved exam progress, and refreshes the app.</span>
+            <span class="text-sm text-slate-600 dark:text-zinc-400">Changing the selection replaces the saved question bank and clears saved exam progress.</span>
           </label>
         </div>
 
@@ -550,13 +564,6 @@ function renderStartScreen() {
             Start Exam
           </button>
         </form>
-      </section>
-
-      <section class="rounded-lg border border-slate-200 bg-white p-5 text-sm leading-6 text-slate-600 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300">
-        <h3 class="mb-2 text-base font-bold text-slate-950 dark:text-zinc-50">Offline note</h3>
-        <p>
-          After a successful first load, the question bank is stored in IndexedDB and your exam progress is stored in browser storage. For local testing, use a simple static server because some browsers block <code class="rounded bg-slate-100 px-1 py-0.5 dark:bg-zinc-800">fetch("data/questions.json")</code> when opening HTML directly from the file system.
-        </p>
       </section>
     </div>
   `;
