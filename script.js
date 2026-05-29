@@ -6,10 +6,10 @@ const DB_STORE = "questionBanks";
 const DB_KEY = "np_motorcycle_questions";
 const DEFAULT_QUESTION_BANK_URL = "data/questions.json";
 const QUESTION_BANK_OPTIONS = [
-  { label: "questions.json", url: "data/questions.json" },
-  { label: "questions-v1.json", url: "data/questions-v1.json" },
-  { label: "drivesafe.ph.json", url: "data/drivesafe.ph.json" },
-  { label: "portal.lto.gov.ph.json", url: "data/portal.lto.gov.ph/portal.lto.gov.ph.json" }
+  { label: "Core reviewer questions", url: "data/questions.json", aliases: ["questions.json"] },
+  { label: "Reviewer questions v1", url: "data/questions-v1.json", aliases: ["questions-v1.json"] },
+  { label: "DriveSafe PH questions", url: "data/drivesafe.ph.json", aliases: ["drivesafe.ph.json"] },
+  { label: "LTO Portal questions", url: "data/portal.lto.gov.ph/portal.lto.gov.ph.json", aliases: ["portal.lto.gov.ph.json"] }
 ];
 
 const STORAGE_KEYS = {
@@ -331,10 +331,13 @@ function normalizeQuestionBankUrl(value) {
 
   const normalizedValue = cleanValue.replace(/\\/g, "/").replace(/^\.\//, "");
   const matchedOption = QUESTION_BANK_OPTIONS.find((option) => {
+    const names = [option.label, ...(option.aliases || [])];
     return normalizedValue === option.url ||
-      normalizedValue === option.label ||
-      normalizedValue === "data/" + option.label ||
-      normalizedValue.endsWith("/" + option.label);
+      names.some((name) => {
+        return normalizedValue === name ||
+          normalizedValue === "data/" + name ||
+          normalizedValue.endsWith("/" + name);
+      });
   });
 
   return matchedOption ? matchedOption.url : "";
@@ -534,7 +537,7 @@ function renderStartScreen() {
 
         <div class="mt-5 rounded-lg border border-dashed border-slate-300 bg-slate-50 p-4 dark:border-zinc-700 dark:bg-zinc-950">
           <label class="grid gap-2">
-            <span class="text-sm font-semibold">Question bank JSON</span>
+            <span class="text-sm font-semibold">Question bank source</span>
             <select id="questionBankSelect" class="min-h-12 rounded-lg border border-slate-300 bg-white px-3 text-base text-slate-950 focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/25 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-50">
               ${renderQuestionBankOptions(selectedQuestionBankUrl)}
             </select>
