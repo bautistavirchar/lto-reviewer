@@ -11,6 +11,11 @@ const QUESTION_BANK_OPTIONS = [
   { label: "DriveSafe PH questions", url: "data/drivesafe.ph.json", aliases: ["drivesafe.ph.json"] },
   { label: "LTO Portal questions", url: "data/portal.lto.gov.ph/portal.lto.gov.ph.json", aliases: ["portal.lto.gov.ph.json"] }
 ];
+const QUESTIONNAIRE_TYPE_OPTIONS = [
+  { label: "All questions", value: "all" },
+  { label: "Questions with images", value: "with-image" },
+  { label: "Text-only questions", value: "text-only" }
+];
 
 const STORAGE_KEYS = {
   theme: "ltoMotorcycleTheme",
@@ -354,6 +359,13 @@ function renderQuestionBankOptions(selectedUrl) {
   }).join("");
 }
 
+function renderQuestionnaireTypeOptions(selectedValue) {
+  return QUESTIONNAIRE_TYPE_OPTIONS.map((option) => {
+    const selected = option.value === selectedValue ? " selected" : "";
+    return `<option value="${escapeAttribute(option.value)}"${selected}>${escapeHtml(option.label)}</option>`;
+  }).join("");
+}
+
 async function handleQuestionBankSelectChange(event) {
   event.preventDefault();
   const select = event.target;
@@ -506,7 +518,8 @@ function renderStartScreen() {
   const settings = loadSettings();
   const counts = getLanguageCounts();
   const hasSavedExam = Boolean(examState && examState.selectedQuestions && examState.selectedQuestions.length);
-  const availableForSelection = countAvailable(settings.language);
+  const questionnaireType = getQuestionnaireTypeValue(settings.questionnaireType);
+  const availableForSelection = countAvailable(settings.language, questionnaireType);
   const selectedQuestionBankUrl = getCurrentQuestionBankUrl();
 
   app.innerHTML = `
@@ -558,9 +571,16 @@ function renderStartScreen() {
           </label>
 
           <label class="grid gap-2">
+            <span class="text-sm font-semibold">Questionnaire Type</span>
+            <select id="questionnaireTypeSelect" class="min-h-12 rounded-lg border border-slate-300 bg-white px-3 text-base text-slate-950 focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/25 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-50">
+              ${renderQuestionnaireTypeOptions(questionnaireType)}
+            </select>
+          </label>
+
+          <label class="grid gap-2">
             <span class="text-sm font-semibold">Number of items</span>
             <input id="itemCountInput" type="number" min="1" step="1" value="${settings.itemCount}" class="min-h-12 rounded-lg border border-slate-300 bg-white px-3 text-base text-slate-950 focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/25 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-50">
-            <span id="availabilityNote" class="text-sm text-slate-600 dark:text-zinc-400">${getAvailabilityText(settings.language, settings.itemCount, availableForSelection)}</span>
+            <span id="availabilityNote" class="text-sm text-slate-600 dark:text-zinc-400">${getAvailabilityText(settings.language, questionnaireType, settings.itemCount, availableForSelection)}</span>
           </label>
 
           <button type="submit" class="min-h-12 rounded-lg bg-teal-700 px-5 py-3 text-base font-bold text-white shadow-sm transition hover:bg-teal-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600 dark:bg-teal-500 dark:text-zinc-950 dark:hover:bg-teal-400">
@@ -575,29 +595,44 @@ function renderStartScreen() {
   const itemCountInput = document.getElementById("itemCountInput");
   const availabilityNote = document.getElementById("availabilityNote");
   const questionBankSelect = document.getElementById("questionBankSelect");
+  const questionnaireTypeSelect = document.getElementById("questionnaireTypeSelect");
 
   questionBankSelect.addEventListener("change", handleQuestionBankSelectChange);
 
   languageSelect.addEventListener("change", () => {
     const language = languageSelect.value;
-    availabilityNote.textContent = getAvailabilityText(language, itemCountInput.value, countAvailable(language));
+    const questionnaireType = getQuestionnaireTypeValue(questionnaireTypeSelect.value);
+    availabilityNote.textContent = getAvailabilityText(language, questionnaireType, itemCountInput.value, countAvailable(language, questionnaireType));
     saveSettings({
       language,
-      itemCount: getRequestedItemCount(itemCountInput.value)
+      itemCount: getRequestedItemCount(itemCountInput.value),
+      questionnaireType
+    });
+  });
+
+  questionnaireTypeSelect.addEventListener("change", () => {
+    const questionnaireType = getQuestionnaireTypeValue(questionnaireTypeSelect.value);
+    availabilityNote.textContent = getAvailabilityText(languageSelect.value, questionnaireType, itemCountInput.value, countAvailable(languageSelect.value, questionnaireType));
+    saveSettings({
+      language: languageSelect.value,
+      itemCount: getRequestedItemCount(itemCountInput.value),
+      questionnaireType
     });
   });
 
   itemCountInput.addEventListener("input", () => {
-    availabilityNote.textContent = getAvailabilityText(languageSelect.value, itemCountInput.value, countAvailable(languageSelect.value));
+    const questionnaireType = getQuestionnaireTypeValue(questionnaireTypeSelect.value);
+    availabilityNote.textContent = getAvailabilityText(languageSelect.value, questionnaireType, itemCountInput.value, countAvailable(languageSelect.value, questionnaireType));
     saveSettings({
       language: languageSelect.value,
-      itemCount: getRequestedItemCount(itemCountInput.value)
+      itemCount: getRequestedItemCount(itemCountInput.value),
+      questionnaireType
     });
   });
 
   document.getElementById("startForm").addEventListener("submit", (event) => {
     event.preventDefault();
-    startExam(languageSelect.value, getRequestedItemCount(itemCountInput.value));
+    startExam(languageSelect.value, getQuestionnaireTypeValue(questionnaireTypeSelect.value), getRequestedItemCount(itemCountInput.value));
   });
 
   const resumeButton = document.getElementById("resumeExamButton");
@@ -640,9 +675,40 @@ function renderSavedExamNotice() {
   `;
 }
 
-function startExam(language, requestedCount) {
+function getQuestionnaireTypeValue(value) {
+  return QUESTIONNAIRE_TYPE_OPTIONS.some((option) => option.value === value) ? value : "all";
+}
+
+function getQuestionnaireTypeLabel(value) {
+  if (getQuestionnaireTypeValue(value) === "all") {
+    return "questions";
+  }
+
+  const option = QUESTIONNAIRE_TYPE_OPTIONS.find((item) => item.value === getQuestionnaireTypeValue(value));
+  return option ? option.label.toLowerCase() : "questions";
+}
+
+function filterQuestionsByQuestionnaireType(questions, questionnaireType) {
+  const selectedQuestionnaireType = getQuestionnaireTypeValue(questionnaireType);
+  if (selectedQuestionnaireType === "with-image") {
+    return questions.filter((question) => Boolean(question.image));
+  }
+
+  if (selectedQuestionnaireType === "text-only") {
+    return questions.filter((question) => !question.image);
+  }
+
+  return questions;
+}
+
+function getQuestionnairePool(language, questionnaireType) {
+  return filterQuestionsByQuestionnaireType(filterQuestionsByLanguage(language), questionnaireType);
+}
+
+function startExam(language, questionnaireType, requestedCount) {
   // Sampling from a shuffled copy prevents duplicate questions in the same exam session.
-  const availableQuestions = filterQuestionsByLanguage(language);
+  const selectedQuestionnaireType = getQuestionnaireTypeValue(questionnaireType);
+  const availableQuestions = getQuestionnairePool(language, selectedQuestionnaireType);
   const selected = sampleWithoutDuplicates(availableQuestions, requestedCount)
     .map((question) => ({
       ...question,
@@ -650,7 +716,7 @@ function startExam(language, requestedCount) {
     }));
 
   if (!selected.length) {
-    showStatus("No questions are available for that language.", "error");
+    showStatus("No " + getQuestionnaireTypeLabel(selectedQuestionnaireType) + " are available for that language.", "error");
     return;
   }
 
@@ -661,6 +727,7 @@ function startExam(language, requestedCount) {
     id: startedAtMs.toString(),
     settings: {
       language,
+      questionnaireType: selectedQuestionnaireType,
       requestedCount,
       actualCount
     },
@@ -676,7 +743,7 @@ function startExam(language, requestedCount) {
     score: null
   };
 
-  saveSettings({ language, itemCount: requestedCount });
+  saveSettings({ language, questionnaireType: selectedQuestionnaireType, itemCount: requestedCount });
   saveExamState();
 
   if (actualCount < requestedCount) {
@@ -1071,8 +1138,8 @@ function filterQuestionsByLanguage(language) {
   return questionBank.filter((question) => question.language === language);
 }
 
-function countAvailable(language) {
-  return filterQuestionsByLanguage(language).length;
+function countAvailable(language, questionnaireType = "all") {
+  return getQuestionnairePool(language, questionnaireType).length;
 }
 
 function getLanguageCounts() {
@@ -1082,19 +1149,20 @@ function getLanguageCounts() {
   }, {});
 }
 
-function getAvailabilityText(language, requestedCount, availableCount) {
+function getAvailabilityText(language, questionnaireType, requestedCount, availableCount) {
   const requested = getRequestedItemCount(requestedCount);
   const languageLabel = language === "all" ? "all languages" : language;
+  const typeLabel = getQuestionnaireTypeLabel(questionnaireType);
 
   if (!availableCount) {
-    return "No questions are available for " + languageLabel + ".";
+    return "No " + typeLabel + " are available for " + languageLabel + ".";
   }
 
   if (requested > availableCount) {
-    return "Only " + availableCount + " questions are available for " + languageLabel + "; the app will use all available questions.";
+    return "Only " + availableCount + " " + typeLabel + " are available for " + languageLabel + "; the app will use all available questions.";
   }
 
-  return availableCount + " questions available for " + languageLabel + ".";
+  return availableCount + " " + typeLabel + " available for " + languageLabel + ".";
 }
 
 function getRequestedItemCount(value) {
@@ -1121,14 +1189,16 @@ function shuffleArray(items) {
 function loadSettings() {
   const defaults = {
     language: "all",
-    itemCount: 60
+    itemCount: 60,
+    questionnaireType: "all"
   };
 
   try {
     const stored = JSON.parse(localStorage.getItem(STORAGE_KEYS.settings));
     return {
       language: stored && ["english", "tagalog", "all"].includes(stored.language) ? stored.language : defaults.language,
-      itemCount: stored && stored.itemCount ? getRequestedItemCount(stored.itemCount) : defaults.itemCount
+      itemCount: stored && stored.itemCount ? getRequestedItemCount(stored.itemCount) : defaults.itemCount,
+      questionnaireType: stored ? getQuestionnaireTypeValue(stored.questionnaireType || stored.questionnaireDisplay) : defaults.questionnaireType
     };
   } catch (error) {
     return defaults;
@@ -1137,7 +1207,10 @@ function loadSettings() {
 
 function saveSettings(settings) {
   try {
-    localStorage.setItem(STORAGE_KEYS.settings, JSON.stringify(settings));
+    localStorage.setItem(STORAGE_KEYS.settings, JSON.stringify({
+      ...loadSettings(),
+      ...settings
+    }));
   } catch (error) {
     console.warn("Settings save failed:", error);
   }
