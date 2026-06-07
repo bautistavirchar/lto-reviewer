@@ -9,6 +9,7 @@ const QUESTION_BANK_OPTIONS = [
   { label: "Core reviewer questions", url: "data/questions.json", aliases: ["questions.json"] },
   { label: "Reviewer questions v1", url: "data/questions-v1.json", aliases: ["questions-v1.json"] },
   { label: "DriveSafe PH questions", url: "data/drivesafe.ph.json", aliases: ["drivesafe.ph.json"] },
+  { label: "CarWahe questions", url: "data/carwahe/reviewer.json", aliases: ["carwahe/reviewer.json", "reviewer.json"] },
   { label: "LTO Portal questions", url: "data/portal.lto.gov.ph/portal.lto.gov.ph.json", aliases: ["portal.lto.gov.ph.json"] }
 ];
 const QUESTIONNAIRE_TYPE_OPTIONS = [
